@@ -12,10 +12,10 @@
                   DowngradeErrorMessage="A newer version of RemoteApp Tool is already installed." />
     <MediaTemplate EmbedCab="yes" />
 
-    <Property Id="ARPPRODUCTICON" Value="AppIcon" />
+    <Property Id="ARPPRODUCTICON" Value="AppIcon.exe" />
     <Property Id="ARPURLINFOABOUT" Value="https://github.com/wiggins-kong/remoteapptool" />
     <Property Id="ARPNOMODIFY" Value="1" />
-    <Icon Id="AppIcon" SourceFile="$(var.BuildDir)\RemoteApp Tool.exe" />
+    <Icon Id="AppIcon.exe" SourceFile="$(var.BuildDir)\RemoteApp Tool.exe" />
 
     <StandardDirectory Id="ProgramFilesFolder">
       <Directory Id="INSTALLFOLDER" Name="RemoteApp Tool" />
@@ -34,8 +34,8 @@
     <ComponentGroup Id="AppFiles" Directory="INSTALLFOLDER">
       <Component Id="MainExecutable" Guid="*">
         <File Id="RemoteAppToolExe" Source="$(var.BuildDir)\RemoteApp Tool.exe" KeyPath="yes">
-          <Shortcut Id="StartMenuShortcut" Directory="ApplicationProgramsFolder" Name="RemoteApp Tool" Advertise="yes" />
-          <Shortcut Id="DesktopShortcut" Directory="DesktopFolder" Name="RemoteApp Tool" Advertise="yes" />
+          <Shortcut Id="StartMenuShortcut" Directory="ApplicationProgramsFolder" Name="RemoteApp Tool" Advertise="yes" Icon="AppIcon.exe" />
+          <Shortcut Id="DesktopShortcut" Directory="DesktopFolder" Name="RemoteApp Tool" Advertise="yes" Icon="AppIcon.exe" />
         </File>
         <RemoveFolder Id="RemoveApplicationProgramsFolder" Directory="ApplicationProgramsFolder" On="uninstall" />
       </Component>
