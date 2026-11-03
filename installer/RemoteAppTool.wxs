@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
+  <Package Name="RemoteApp Tool"
+           Manufacturer="The RemoteApp Tool developers"
+           Version="$(var.ProductVersion)"
+           Language="1033"
+           UpgradeCode="3B0A08A8-E72A-4AFD-AC75-93AC686CDC39"
+           Scope="perMachine"
+           Compressed="yes">
+
+    <MajorUpgrade AllowSameVersionUpgrades="yes"
+                  DowngradeErrorMessage="A newer version of RemoteApp Tool is already installed." />
+    <MediaTemplate EmbedCab="yes" />
+
+    <Property Id="ARPPRODUCTICON" Value="AppIcon" />
+    <Property Id="ARPURLINFOABOUT" Value="https://github.com/wiggins-kong/remoteapptool" />
+    <Property Id="ARPNOMODIFY" Value="1" />
+    <Icon Id="AppIcon" SourceFile="$(var.BuildDir)\RemoteApp Tool.exe" />
+
+    <StandardDirectory Id="ProgramFilesFolder">
+      <Directory Id="INSTALLFOLDER" Name="RemoteApp Tool" />
+    </StandardDirectory>
+    <StandardDirectory Id="ProgramMenuFolder">
+      <Directory Id="ApplicationProgramsFolder" Name="RemoteApp Tool" />
+    </StandardDirectory>
+    <StandardDirectory Id="DesktopFolder" />
+
+    <Feature Id="MainFeature" Title="RemoteApp Tool" Level="1">
+      <ComponentGroupRef Id="AppFiles" />
+    </Feature>
+  </Package>
+
+  <Fragment>
+    <ComponentGroup Id="AppFiles" Directory="INSTALLFOLDER">
+      <Component Id="MainExecutable" Guid="*">
+        <File Id="RemoteAppToolExe" Source="$(var.BuildDir)\RemoteApp Tool.exe" KeyPath="yes">
+          <Shortcut Id="StartMenuShortcut" Directory="ApplicationProgramsFolder" Name="RemoteApp Tool" Advertise="yes" />
+          <Shortcut Id="DesktopShortcut" Directory="DesktopFolder" Name="RemoteApp Tool" Advertise="yes" />
+        </File>
+        <RemoveFolder Id="RemoveApplicationProgramsFolder" Directory="ApplicationProgramsFolder" On="uninstall" />
+      </Component>
+      <Component Id="RemoteAppLibDll" Guid="*">
+        <File Source="$(var.BuildDir)\RemoteAppLib.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="IconLibDll" Guid="*">
+        <File Source="$(var.BuildDir)\IconLib.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="LockCheckerDll" Guid="*">
+        <File Source="$(var.BuildDir)\LockChecker.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="Rdp2MsiExe" Guid="*">
+        <File Source="$(var.BuildDir)\RDP2MSI.exe" KeyPath="yes" />
+      </Component>
+      <Component Id="Rdp2MsiLibDll" Guid="*">
+        <File Source="$(var.BuildDir)\RDP2MSIlib.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="RdpFileLibDll" Guid="*">
+        <File Source="$(var.BuildDir)\RDPFileLib.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="RdpSignDll" Guid="*">
+        <File Source="$(var.BuildDir)\RDPSign.dll" KeyPath="yes" />
+      </Component>
+    </ComponentGroup>
+  </Fragment>
+</Wix>

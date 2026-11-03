@@ -34,9 +34,9 @@ If you have questions, comments or suggestions about RemoteApp Tool, please visi
 
 **Latest:**
 
-[RemoteApp Tool 6.1.0.0 Installer](https://github.com/kimmknight/remoteapptool/releases/download/v6.1.0.0/RemoteApp.Tool.6100.msi)
+[RemoteApp Tool 6.1.0.0.1 Installer](https://github.com/wiggins-kong/remoteapptool/releases/download/v6.1.0.0.1/RemoteApp.Tool.61001.msi)
 
-[RemoteApp Tool 6.1.0.0 Zip](https://github.com/kimmknight/remoteapptool/releases/download/v6.1.0.0/RemoteApp.Tool.6100.zip)
+[RemoteApp Tool 6.1.0.0.1 Zip](https://github.com/wiggins-kong/remoteapptool/releases/download/v6.1.0.0.1/RemoteApp.Tool.61001.zip)
 
 Please note: The latest installer no longer works on Windows XP, use the Zip instead.
 
