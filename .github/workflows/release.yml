@@ -61,12 +61,14 @@ jobs:
           Compress-Archive -Path $files -DestinationPath "dist\RemoteApp.Tool.${{ steps.version.outputs.asset }}.zip"
 
       - name: Install WiX
-        run: dotnet tool install --tool-path .wix wix --version 5.0.2
+        run: |
+          dotnet tool install --tool-path .wix wix --version 5.0.2
+          .\.wix\wix.exe extension add -g WixToolset.UI.wixext/5.0.2
 
       - name: Build MSI
         shell: pwsh
         run: |
-          .\.wix\wix.exe build installer\RemoteAppTool.wxs `
+          .\.wix\wix.exe build installer\RemoteAppTool.wxs -ext WixToolset.UI.wixext `
             -d BuildDir="${{ github.workspace }}\remoteapp-tool\bin\Release" `
             -d ProductVersion="${{ steps.version.outputs.app }}" `
             -o "dist\RemoteApp.Tool.${{ steps.version.outputs.asset }}.msi"
