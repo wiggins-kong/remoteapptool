@@ -55,7 +55,7 @@ Public Class IconExtractor
             Dim numIcons As Integer = ExtractIconEx(filePath, -1, 0&, 0&, 0&)
 
             If numIcons = 0 Then
-                Throw New Exception("No icons found in " & filePath)
+                Throw New Exception("未找到图标：" & filePath)
             End If
 
             numIcons -= 1

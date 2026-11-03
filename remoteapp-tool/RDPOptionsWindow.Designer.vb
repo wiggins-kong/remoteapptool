@@ -70,7 +70,7 @@ Partial Class RDPOptionsWindow
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(57, 15)
         Me.Label1.TabIndex = 2
-        Me.Label1.Text = "Set value:"
+        Me.Label1.Text = "设置值："
         '
         'ValueTextBox
         '
@@ -103,16 +103,16 @@ Partial Class RDPOptionsWindow
         '
         'ColumnHeader1
         '
-        Me.ColumnHeader1.Text = "Option"
+        Me.ColumnHeader1.Text = "选项"
         Me.ColumnHeader1.Width = 200
         '
         'ColumnHeader2
         '
-        Me.ColumnHeader2.Text = "Type"
+        Me.ColumnHeader2.Text = "类型"
         '
         'ColumnHeader3
         '
-        Me.ColumnHeader3.Text = "Value"
+        Me.ColumnHeader3.Text = "值"
         Me.ColumnHeader3.Width = 282
         '
         'SaveButton
@@ -125,7 +125,7 @@ Partial Class RDPOptionsWindow
         Me.SaveButton.Name = "SaveButton"
         Me.SaveButton.Size = New System.Drawing.Size(64, 29)
         Me.SaveButton.TabIndex = 9
-        Me.SaveButton.Text = "Close"
+        Me.SaveButton.Text = "关闭"
         Me.SaveButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.SaveButton.UseVisualStyleBackColor = False
         '
@@ -152,7 +152,7 @@ Partial Class RDPOptionsWindow
         Me.ResetButton.Name = "ResetButton"
         Me.ResetButton.Size = New System.Drawing.Size(90, 29)
         Me.ResetButton.TabIndex = 8
-        Me.ResetButton.Text = "Clear all"
+        Me.ResetButton.Text = "全部清除"
         Me.ResetButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.ResetButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.ResetButton.UseVisualStyleBackColor = False
@@ -164,7 +164,7 @@ Partial Class RDPOptionsWindow
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(97, 15)
         Me.Label2.TabIndex = 5
-        Me.Label2.Text = "Selected options:"
+        Me.Label2.Text = "已选选项："
         '
         'DefaultsButton
         '
@@ -177,7 +177,7 @@ Partial Class RDPOptionsWindow
         Me.DefaultsButton.Name = "DefaultsButton"
         Me.DefaultsButton.Size = New System.Drawing.Size(89, 29)
         Me.DefaultsButton.TabIndex = 7
-        Me.DefaultsButton.Text = "Defaults"
+        Me.DefaultsButton.Text = "默认值"
         Me.DefaultsButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.DefaultsButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.DefaultsButton.UseVisualStyleBackColor = False
@@ -221,7 +221,7 @@ Partial Class RDPOptionsWindow
         Me.MinimizeBox = False
         Me.Name = "RDPOptionsWindow"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
-        Me.Text = "Additional RDP Options"
+        Me.Text = "其他 RDP 选项"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

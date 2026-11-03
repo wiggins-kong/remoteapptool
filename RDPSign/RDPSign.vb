@@ -105,10 +105,10 @@ Public Class RDPSign
             Dim SkipFile As Boolean = False
             FileLocked = LockCheck.CheckLock(BackupFile)
             While Not (FileLocked = "No locks")
-                If (MessageBox.Show("The file " + BackupFile + " is currently locked.  Lock information:" + FileLocked + vbNewLine + "Do you want to try again?", "File Locked", MessageBoxButtons.YesNo) = DialogResult.Yes) Then
+                If (MessageBox.Show("文件 " + BackupFile + " 当前被锁定。锁定信息：" + FileLocked + vbNewLine + "是否重试？", "文件已锁定", MessageBoxButtons.YesNo) = DialogResult.Yes) Then
                     FileLocked = LockCheck.CheckLock(BackupFile)
                 Else
-                    MessageBox.Show("The following file will not be copied:" + vbNewLine + BackupFile)
+                    MessageBox.Show("以下文件将不会被复制：" + vbNewLine + BackupFile)
                     SkipFile = True
                     FileLocked = "No locks"
                 End If
@@ -147,7 +147,7 @@ Public Class RDPSign
             StartInfo.WindowStyle = ProcessWindowStyle.Hidden
             Process.Start(StartInfo)
         Else
-            MessageBox.Show("RDPSign executable not found:" & vbNewLine & vbNewLine & Command, My.Application.Info.AssemblyName, MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("未找到 RDPSign 可执行文件：" & vbNewLine & vbNewLine & Command, My.Application.Info.AssemblyName, MessageBoxButtons.OK, MessageBoxIcon.Error)
         End If
 
     End Sub

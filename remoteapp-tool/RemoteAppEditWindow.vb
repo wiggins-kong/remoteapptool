@@ -3,11 +3,13 @@
 Public Class RemoteAppEditWindow
 
     Private RemoteApp As New RemoteApp
+    Private IsNew As Boolean = False
 
     Public Function EditRemoteApp(SelectedRemoteApp As RemoteApp) As RemoteApp
         HelpSystem.SetupTips(Me)
         RemoteApp = SelectedRemoteApp
-        Me.Text = "Properties of " & RemoteApp.Name
+        IsNew = False
+        Me.Text = RemoteApp.Name & " 的属性"
         Me.Size = Me.MinimumSize
         HelpSystem.SetupTips(Me)
         Me.LoadValues()
@@ -17,9 +19,10 @@ Public Class RemoteAppEditWindow
     End Function
 
     Public Function CreateRemoteApp(Optional Advanced As Boolean = False) As RemoteApp
-        Me.Text = "New RemoteApp"
+        Me.Text = "新建 RemoteApp"
         Me.Size = Me.MinimumSize
         HelpSystem.SetupTips(Me)
+        IsNew = True
         Me.CommandLineOptionCombo.SelectedIndex = 1
         Me.TSWAbox.SelectedIndex = 0
         Me.FTAButton.Enabled = False
@@ -46,9 +49,9 @@ Public Class RemoteAppEditWindow
         toolTip1.InitialDelay = 1000
         toolTip1.ReshowDelay = 500
 
-        toolTip1.SetToolTip(Me.BrowseIconPath, "Select an icon")
-        toolTip1.SetToolTip(Me.BrowsePath, "Browse for application")
-        toolTip1.SetToolTip(Me.IconResetButton, "Reset icon to application default")
+        toolTip1.SetToolTip(Me.BrowseIconPath, "选择图标")
+        toolTip1.SetToolTip(Me.BrowsePath, "浏览应用程序")
+        toolTip1.SetToolTip(Me.IconResetButton, "将图标重置为应用程序默认图标")
     End Sub
 
     Sub LoadValues()
@@ -126,7 +129,7 @@ Public Class RemoteAppEditWindow
 
         Dim SysApps As New SystemRemoteApps
 
-        If (Not RemoteApp.Name Is Nothing) And Not (Me.Text = "New RemoteApp") Then If Not RemoteApp.Name = ShortName Then SysApps.RenameApp(RemoteApp.Name, ShortName)
+        If (Not RemoteApp.Name Is Nothing) And Not IsNew Then If Not RemoteApp.Name = ShortName Then SysApps.RenameApp(RemoteApp.Name, ShortName)
 
         RemoteApp.Name = ShortName
         RemoteApp.FullName = FullName
@@ -163,19 +166,19 @@ Public Class RemoteAppEditWindow
 
     Private Sub SaveAndCloseOrWindow()
         If Me.ShortNameText.Text = "" Then
-            MessageBox.Show("Name must not be blank.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Stop)
+            MessageBox.Show("名称不能为空。", "错误", MessageBoxButtons.OK, MessageBoxIcon.Stop)
             Me.ShowDialog()
         ElseIf Me.FullNameText.Text = "" Then
-            MessageBox.Show("Full name must not be blank.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Stop)
+            MessageBox.Show("完整名称不能为空。", "错误", MessageBoxButtons.OK, MessageBoxIcon.Stop)
             Me.ShowDialog()
         ElseIf Me.PathText.Text = "" Then
-            MessageBox.Show("Path must not be blank.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Stop)
+            MessageBox.Show("路径不能为空。", "错误", MessageBoxButtons.OK, MessageBoxIcon.Stop)
             Me.ShowDialog()
         ElseIf Not Me.ShortNameText.Text = RemoteApp.Name And DoesAppExist(Me.ShortNameText.Text) Then
-            MessageBox.Show("A RemoteApp with the same name already exists.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Stop)
+            MessageBox.Show("已存在同名 RemoteApp。", "错误", MessageBoxButtons.OK, MessageBoxIcon.Stop)
             Me.ShowDialog()
-        ElseIf Me.Text = "New RemoteApp" And DoesAppExist(Me.ShortNameText.Text) Then
-            MessageBox.Show("A RemoteApp with the same name already exists.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Stop)
+        ElseIf IsNew And DoesAppExist(Me.ShortNameText.Text) Then
+            MessageBox.Show("已存在同名 RemoteApp。", "错误", MessageBoxButtons.OK, MessageBoxIcon.Stop)
             Me.ShowDialog()
         Else
             SaveRemoteApp(Me.ShortNameText.Text.Trim, Me.FullNameText.Text, Me.PathText.Text, Me.PathText.Text, Me.CommandLineText.Text, Me.CommandLineOptionCombo.SelectedIndex, Me.IconPathText.Text, Val(IconIndexText.Text), Me.TSWAbox.SelectedIndex)
@@ -185,15 +188,15 @@ Public Class RemoteAppEditWindow
 
     Private Sub SaveAndClose()
         If Me.ShortNameText.Text = "" Then
-            MessageBox.Show("Name must not be blank.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Stop)
+            MessageBox.Show("名称不能为空。", "错误", MessageBoxButtons.OK, MessageBoxIcon.Stop)
         ElseIf Me.FullNameText.Text = "" Then
-            MessageBox.Show("Full name must not be blank.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Stop)
+            MessageBox.Show("完整名称不能为空。", "错误", MessageBoxButtons.OK, MessageBoxIcon.Stop)
         ElseIf Me.PathText.Text = "" Then
-            MessageBox.Show("Path must not be blank.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Stop)
+            MessageBox.Show("路径不能为空。", "错误", MessageBoxButtons.OK, MessageBoxIcon.Stop)
         ElseIf Not Me.ShortNameText.Text = RemoteApp.Name And DoesAppExist(Me.ShortNameText.Text) Then
-            MessageBox.Show("A RemoteApp with the same name already exists.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Stop)
-        ElseIf Me.Text = "New RemoteApp" And DoesAppExist(Me.ShortNameText.Text) Then
-            MessageBox.Show("A RemoteApp with the same name already exists.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Stop)
+            MessageBox.Show("已存在同名 RemoteApp。", "错误", MessageBoxButtons.OK, MessageBoxIcon.Stop)
+        ElseIf IsNew And DoesAppExist(Me.ShortNameText.Text) Then
+            MessageBox.Show("已存在同名 RemoteApp。", "错误", MessageBoxButtons.OK, MessageBoxIcon.Stop)
         Else
             SaveRemoteApp(Me.ShortNameText.Text.Trim, Me.FullNameText.Text, Me.PathText.Text, Me.PathText.Text, Me.CommandLineText.Text, Me.CommandLineOptionCombo.SelectedIndex, Me.IconPathText.Text, Val(IconIndexText.Text), Me.TSWAbox.SelectedIndex)
             Me.Close()

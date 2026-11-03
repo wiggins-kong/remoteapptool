@@ -10,7 +10,7 @@ Public Class RemoteAppCreateClientConnection
 
         Dim rdpSign As New RDPSign.RDPSign
         Dim RemoteAppShortName = RemoteApp.Name
-        Me.Text = "Create Client Connection for " & RemoteAppShortName
+        Me.Text = "为 " & RemoteAppShortName & " 创建客户端连接"
         Me.RdpsignErrorLabel.Text = ""
 
         CertificateComboBox.Items.AddRange(rdpSign.GetCertificateFriendlyName)
@@ -32,12 +32,12 @@ Public Class RemoteAppCreateClientConnection
         If Not wx.WixInstalled Then
             RDPRadioButton.Checked = True
             MSIRadioButton.Enabled = False
-            MSIRadioButton.Text = "MSI installer (requires WiX Toolset)"
+            MSIRadioButton.Text = "MSI 安装包（需要 WiX 工具集）"
         End If
 
         If Not My.Computer.FileSystem.FileExists(rdpSign.GetRdpsignExeLocation) Then
             SigningTabPage.Enabled = False
-            RdpsignErrorLabel.Text += " * Requires rdpsign.exe."
+            RdpsignErrorLabel.Text += " * 需要 rdpsign.exe。"
             SigningTabPage.Tag = "noexe"
             CheckBoxSignRDPEnabled.Checked = False
             CheckBoxCreateSignedAndUnsigned.Checked = False
@@ -45,7 +45,7 @@ Public Class RemoteAppCreateClientConnection
         End If
 
         If Not RemoteApp.FileTypeAssociations Is Nothing Then _
-        FTACountLabel.Text = "Count: " & RemoteApp.FileTypeAssociations.Count
+        FTACountLabel.Text = "数量：" & RemoteApp.FileTypeAssociations.Count
 
         Me.RDPRadioButton.Focus()
         HelpSystem.SetupTips(Me)
@@ -148,7 +148,7 @@ Public Class RemoteAppCreateClientConnection
         ElseIf CertificateComboBox.Items.Count > 0 Then
             CertificateComboBox.SelectedIndex() = 0
         ElseIf Not SigningTabPage.Tag = "noexe" Then
-            RdpsignErrorLabel.Text += " No certificates found."
+            RdpsignErrorLabel.Text += " 未找到证书。"
             SigningTabPage.Enabled = False
             CheckBoxSignRDPEnabled.Checked = False
             CheckBoxCreateSignedAndUnsigned.Checked = False
@@ -198,7 +198,7 @@ Public Class RemoteAppCreateClientConnection
         Dim TempMSIPath = ""
 
         If CheckBoxSignRDPEnabled.Checked And CertificateComboBox.SelectedItem = "" Then
-            MessageBox.Show("You must select a certificate to sign the RDP file.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("必须选择用于签名 RDP 文件的证书。", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Return
         End If
 
@@ -234,7 +234,7 @@ Public Class RemoteAppCreateClientConnection
             If CreateRAWebIcon.Checked Then
                 Dim IconFilePath = Microsoft.VisualBasic.Left(RDPPath, RDPPath.Length - 4) & ".ico"
                 If ExtractToIco(RemoteApp.IconPath, RemoteApp.IconIndex, IconFilePath) = False Then
-                    MessageBox.Show("Icon could not be created the RemoteApp. RDP file will still be created.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                    MessageBox.Show("无法为 RemoteApp 创建图标。RDP 文件仍会创建。", "警告", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                 End If
                 ' Check if there are file type associations before trying to work with the file type association icons
                 If Not (RemoteApp.FileTypeAssociations Is Nothing) Then
@@ -264,7 +264,7 @@ Public Class RemoteAppCreateClientConnection
             FilesToDelete.Add(RDPPath)
 
             If ExtractToIco(RemoteApp.IconPath, RemoteApp.IconIndex, IconFilePath) = False Then
-                MessageBox.Show("There was an error loading icon:" & vbCrLf & RemoteApp.IconPath & "," & RemoteApp.IconIndex & vbCrLf & "The MSI will still be created but the main icon will be missing.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                MessageBox.Show("加载图标时出错：" & vbCrLf & RemoteApp.IconPath & "," & RemoteApp.IconIndex & vbCrLf & "MSI 仍会创建，但主图标将缺失。", "警告", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
             Else
                 FilesToDelete.Add(IconFilePath)
             End If
@@ -354,11 +354,11 @@ Public Class RemoteAppCreateClientConnection
     End Function
 
     Private Sub FTAButton_Click(sender As Object, e As EventArgs) Handles FTAButton.Click
-        MessageBox.Show(Me, "Changes made here to File Type Associations are for this client connection only and will not be saved for next time." & vbCrLf & vbCrLf &
-               "To make permanent changes to the File Type Associations for this RemoteApp, edit the RemoteApp.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        MessageBox.Show(Me, "此处对文件类型关联的更改仅用于本次客户端连接，不会保存。" & vbCrLf & vbCrLf &
+               "若要永久修改此 RemoteApp 的文件类型关联，请编辑该 RemoteApp。", "信息", MessageBoxButtons.OK, MessageBoxIcon.Information)
         RemoteApp = RemoteAppFileTypeAssociation.EditFileTypes(RemoteApp)
         If Not RemoteApp.FileTypeAssociations Is Nothing Then _
-        FTACountLabel.Text = "Count: " & RemoteApp.FileTypeAssociations.Count
+        FTACountLabel.Text = "数量：" & RemoteApp.FileTypeAssociations.Count
 
     End Sub
 
@@ -405,7 +405,7 @@ Public Class RemoteAppCreateClientConnection
     Private Sub CheckBoxSignRDPEnabled_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBoxSignRDPEnabled.CheckedChanged
         CertificateComboBox.Enabled = CheckBoxSignRDPEnabled.Checked
         If (EditAfterSave.Checked And CheckBoxSignRDPEnabled.Checked) Then
-            If MessageBox.Show("You have selected ""Sign RDP file"" and ""Manually edit RDP file""." & vbCrLf & vbCrLf & "If you save any changes to a signed RDP file it will stop working." & vbCrLf & vbCrLf & "Are you sure you want the RDP file to be signed?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) = DialogResult.Yes Then
+            If MessageBox.Show("你同时选择了「对 RDP 文件签名」和「手动编辑 RDP 文件」。" & vbCrLf & vbCrLf & "对已签名的 RDP 文件做任何修改都会使其失效。" & vbCrLf & vbCrLf & "确定要对 RDP 文件签名吗？", "警告", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) = DialogResult.Yes Then
                 CheckBoxSignRDPEnabled.Checked = True
             Else
                 CheckBoxSignRDPEnabled.Checked = False
@@ -415,7 +415,7 @@ Public Class RemoteAppCreateClientConnection
 
     Private Sub EditAfterSave_CheckedChanged(sender As Object, e As EventArgs) Handles EditAfterSave.CheckedChanged
         If (EditAfterSave.Checked And CheckBoxSignRDPEnabled.Checked) Then
-            If MessageBox.Show("You have selected ""Sign RDP file"" and ""Manually edit RDP file""." & vbCrLf & vbCrLf & "If you save any changes to a signed RDP file it will stop working." & vbCrLf & vbCrLf & "Are you sure you want to edit after saving?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) = DialogResult.Yes Then
+            If MessageBox.Show("你同时选择了「对 RDP 文件签名」和「手动编辑 RDP 文件」。" & vbCrLf & vbCrLf & "对已签名的 RDP 文件做任何修改都会使其失效。" & vbCrLf & vbCrLf & "确定要在保存后编辑吗？", "警告", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) = DialogResult.Yes Then
                 EditAfterSave.Checked = True
             Else
                 EditAfterSave.Checked = False

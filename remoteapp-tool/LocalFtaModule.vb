@@ -33,7 +33,7 @@ Module LocalFtaModule
             End If
         Next
 
-        MessageBox.Show("Unused file type associations removed: " & RemoveCount, "File Type Association", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        MessageBox.Show("已移除未使用的文件类型关联：" & RemoveCount, "文件类型关联", MessageBoxButtons.OK, MessageBoxIcon.Information)
     End Sub
 
     Public Function CreateFTACollection(ftaCol As FileTypeAssociationCollection, exeFile As String, RemoteAppName As String, Optional overwrite As Boolean = False) As String

@@ -94,7 +94,7 @@ Partial Class RemoteAppCreateClientConnection
         Me.EditAfterSave.Name = "EditAfterSave"
         Me.EditAfterSave.Size = New System.Drawing.Size(165, 30)
         Me.EditAfterSave.TabIndex = 3
-        Me.EditAfterSave.Text = "Manually edit RDP file"
+        Me.EditAfterSave.Text = "手动编辑 RDP 文件"
         Me.EditAfterSave.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         Me.EditAfterSave.UseVisualStyleBackColor = False
         '
@@ -121,14 +121,14 @@ Partial Class RemoteAppCreateClientConnection
         Me.CreateButton.Name = "CreateButton"
         Me.CreateButton.Size = New System.Drawing.Size(80, 29)
         Me.CreateButton.TabIndex = 9
-        Me.CreateButton.Text = "Create..."
+        Me.CreateButton.Text = "创建..."
         Me.CreateButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.CreateButton.UseVisualStyleBackColor = False
         '
         'FileSaveRDP
         '
         Me.FileSaveRDP.DefaultExt = "rdp"
-        Me.FileSaveRDP.Filter = "RDP files|*.rdp"
+        Me.FileSaveRDP.Filter = "RDP 文件|*.rdp"
         '
         'CancelEditButton
         '
@@ -141,7 +141,7 @@ Partial Class RemoteAppCreateClientConnection
         Me.CancelEditButton.Name = "CancelEditButton"
         Me.CancelEditButton.Size = New System.Drawing.Size(67, 29)
         Me.CancelEditButton.TabIndex = 8
-        Me.CancelEditButton.Text = "Cancel"
+        Me.CancelEditButton.Text = "取消"
         Me.CancelEditButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.CancelEditButton.UseVisualStyleBackColor = False
         '
@@ -152,7 +152,7 @@ Partial Class RemoteAppCreateClientConnection
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(101, 15)
         Me.Label13.TabIndex = 4
-        Me.Label13.Text = "Alternative server:"
+        Me.Label13.Text = "备用服务器："
         '
         'Label14
         '
@@ -161,7 +161,7 @@ Partial Class RemoteAppCreateClientConnection
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(32, 15)
         Me.Label14.TabIndex = 2
-        Me.Label14.Text = "Port:"
+        Me.Label14.Text = "端口："
         '
         'Label12
         '
@@ -170,7 +170,7 @@ Partial Class RemoteAppCreateClientConnection
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(85, 15)
         Me.Label12.TabIndex = 0
-        Me.Label12.Text = "Server address:"
+        Me.Label12.Text = "服务器地址："
         '
         'ServerPort
         '
@@ -202,7 +202,7 @@ Partial Class RemoteAppCreateClientConnection
         Me.AttemptDirectCheckBox.Name = "AttemptDirectCheckBox"
         Me.AttemptDirectCheckBox.Size = New System.Drawing.Size(326, 19)
         Me.AttemptDirectCheckBox.TabIndex = 3
-        Me.AttemptDirectCheckBox.Text = "Only use RD Gateway if direct connection is unsuccessful"
+        Me.AttemptDirectCheckBox.Text = "仅在直接连接失败时使用 RD 网关"
         Me.AttemptDirectCheckBox.UseVisualStyleBackColor = True
         '
         'UseRDGatewayCheckBox
@@ -212,7 +212,7 @@ Partial Class RemoteAppCreateClientConnection
         Me.UseRDGatewayCheckBox.Name = "UseRDGatewayCheckBox"
         Me.UseRDGatewayCheckBox.Size = New System.Drawing.Size(111, 19)
         Me.UseRDGatewayCheckBox.TabIndex = 0
-        Me.UseRDGatewayCheckBox.Text = "Use RD Gateway"
+        Me.UseRDGatewayCheckBox.Text = "使用 RD 网关"
         Me.UseRDGatewayCheckBox.UseVisualStyleBackColor = True
         '
         'RDGWLabel
@@ -223,7 +223,7 @@ Partial Class RemoteAppCreateClientConnection
         Me.RDGWLabel.Name = "RDGWLabel"
         Me.RDGWLabel.Size = New System.Drawing.Size(116, 15)
         Me.RDGWLabel.TabIndex = 1
-        Me.RDGWLabel.Text = "RD Gateway address:"
+        Me.RDGWLabel.Text = "RD 网关地址："
         '
         'GatewayAddress
         '
@@ -241,7 +241,7 @@ Partial Class RemoteAppCreateClientConnection
         Me.MSIRadioButton.Size = New System.Drawing.Size(89, 19)
         Me.MSIRadioButton.TabIndex = 2
         Me.MSIRadioButton.TabStop = True
-        Me.MSIRadioButton.Text = "MSI installer"
+        Me.MSIRadioButton.Text = "MSI 安装包"
         Me.MSIRadioButton.UseVisualStyleBackColor = True
         '
         'RDPRadioButton
@@ -253,7 +253,7 @@ Partial Class RemoteAppCreateClientConnection
         Me.RDPRadioButton.Size = New System.Drawing.Size(66, 19)
         Me.RDPRadioButton.TabIndex = 1
         Me.RDPRadioButton.TabStop = True
-        Me.RDPRadioButton.Text = "RDP file"
+        Me.RDPRadioButton.Text = "RDP 文件"
         Me.RDPRadioButton.UseVisualStyleBackColor = True
         '
         'CreateRAWebIcon
@@ -265,7 +265,7 @@ Partial Class RemoteAppCreateClientConnection
         Me.CreateRAWebIcon.Name = "CreateRAWebIcon"
         Me.CreateRAWebIcon.Size = New System.Drawing.Size(126, 30)
         Me.CreateRAWebIcon.TabIndex = 4
-        Me.CreateRAWebIcon.Text = "Create icon files"
+        Me.CreateRAWebIcon.Text = "创建图标文件"
         Me.CreateRAWebIcon.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         Me.CreateRAWebIcon.UseVisualStyleBackColor = False
         '
@@ -278,19 +278,19 @@ Partial Class RemoteAppCreateClientConnection
         Me.FTAButton.Name = "FTAButton"
         Me.FTAButton.Size = New System.Drawing.Size(172, 29)
         Me.FTAButton.TabIndex = 2
-        Me.FTAButton.Text = "File type associations..."
+        Me.FTAButton.Text = "文件类型关联..."
         Me.FTAButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.FTAButton.UseVisualStyleBackColor = False
         '
         'FileBrowserIcon
         '
-        Me.FileBrowserIcon.Filter = "Icons|*.exe;*.dll;*.ico|All files|*.*"
-        Me.FileBrowserIcon.Title = "Browse..."
+        Me.FileBrowserIcon.Filter = "图标|*.exe;*.dll;*.ico|所有文件|*.*"
+        Me.FileBrowserIcon.Title = "浏览..."
         '
         'FileSaveMSI
         '
         Me.FileSaveMSI.DefaultExt = "msi"
-        Me.FileSaveMSI.Filter = "MSI files|*.msi"
+        Me.FileSaveMSI.Filter = "MSI 文件|*.msi"
         '
         'ShortcutDesktopCheckBox
         '
@@ -301,7 +301,7 @@ Partial Class RemoteAppCreateClientConnection
         Me.ShortcutDesktopCheckBox.Name = "ShortcutDesktopCheckBox"
         Me.ShortcutDesktopCheckBox.Size = New System.Drawing.Size(69, 19)
         Me.ShortcutDesktopCheckBox.TabIndex = 1
-        Me.ShortcutDesktopCheckBox.Text = "Desktop"
+        Me.ShortcutDesktopCheckBox.Text = "桌面"
         Me.ShortcutDesktopCheckBox.UseVisualStyleBackColor = True
         '
         'Panel1
@@ -323,7 +323,7 @@ Partial Class RemoteAppCreateClientConnection
         Me.PerMachineRadioButton.Size = New System.Drawing.Size(93, 19)
         Me.PerMachineRadioButton.TabIndex = 0
         Me.PerMachineRadioButton.TabStop = True
-        Me.PerMachineRadioButton.Text = "Per-machine"
+        Me.PerMachineRadioButton.Text = "所有用户"
         Me.PerMachineRadioButton.UseVisualStyleBackColor = True
         '
         'PerUserRadioButton
@@ -334,7 +334,7 @@ Partial Class RemoteAppCreateClientConnection
         Me.PerUserRadioButton.Size = New System.Drawing.Size(69, 19)
         Me.PerUserRadioButton.TabIndex = 1
         Me.PerUserRadioButton.TabStop = True
-        Me.PerUserRadioButton.Text = "Per-user"
+        Me.PerUserRadioButton.Text = "当前用户"
         Me.PerUserRadioButton.UseVisualStyleBackColor = True
         '
         'TopLevelRadioButton
@@ -344,7 +344,7 @@ Partial Class RemoteAppCreateClientConnection
         Me.TopLevelRadioButton.Name = "TopLevelRadioButton"
         Me.TopLevelRadioButton.Size = New System.Drawing.Size(71, 19)
         Me.TopLevelRadioButton.TabIndex = 4
-        Me.TopLevelRadioButton.Text = "Top level"
+        Me.TopLevelRadioButton.Text = "顶层"
         Me.TopLevelRadioButton.UseVisualStyleBackColor = True
         '
         'SubfolderRadioButton
@@ -356,7 +356,7 @@ Partial Class RemoteAppCreateClientConnection
         Me.SubfolderRadioButton.Size = New System.Drawing.Size(76, 19)
         Me.SubfolderRadioButton.TabIndex = 3
         Me.SubfolderRadioButton.TabStop = True
-        Me.SubfolderRadioButton.Text = "Subfolder"
+        Me.SubfolderRadioButton.Text = "子文件夹"
         Me.SubfolderRadioButton.UseVisualStyleBackColor = True
         '
         'ShortcutStartCheckBox
@@ -368,7 +368,7 @@ Partial Class RemoteAppCreateClientConnection
         Me.ShortcutStartCheckBox.Name = "ShortcutStartCheckBox"
         Me.ShortcutStartCheckBox.Size = New System.Drawing.Size(87, 19)
         Me.ShortcutStartCheckBox.TabIndex = 2
-        Me.ShortcutStartCheckBox.Text = "Start Menu:"
+        Me.ShortcutStartCheckBox.Text = "开始菜单："
         Me.ShortcutStartCheckBox.UseVisualStyleBackColor = True
         '
         'Label3
@@ -398,7 +398,7 @@ Partial Class RemoteAppCreateClientConnection
         Me.ShortcutTagCheckBox.Name = "ShortcutTagCheckBox"
         Me.ShortcutTagCheckBox.Size = New System.Drawing.Size(94, 19)
         Me.ShortcutTagCheckBox.TabIndex = 5
-        Me.ShortcutTagCheckBox.Text = "Shortcut tag:"
+        Me.ShortcutTagCheckBox.Text = "快捷方式标签："
         Me.ShortcutTagCheckBox.UseVisualStyleBackColor = True
         '
         'ShortcutTagTextBox
@@ -416,7 +416,7 @@ Partial Class RemoteAppCreateClientConnection
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(75, 15)
         Me.Label4.TabIndex = 8
-        Me.Label4.Text = "Install scope:"
+        Me.Label4.Text = "安装范围："
         '
         'Label1
         '
@@ -425,7 +425,7 @@ Partial Class RemoteAppCreateClientConnection
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(103, 15)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Place shortcuts in:"
+        Me.Label1.Text = "快捷方式位置："
         '
         'ResetButton
         '
@@ -437,7 +437,7 @@ Partial Class RemoteAppCreateClientConnection
         Me.ResetButton.Name = "ResetButton"
         Me.ResetButton.Size = New System.Drawing.Size(121, 29)
         Me.ResetButton.TabIndex = 7
-        Me.ResetButton.Text = "Reset to default"
+        Me.ResetButton.Text = "重置为默认值"
         Me.ResetButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.ResetButton.UseVisualStyleBackColor = False
         '
@@ -451,7 +451,7 @@ Partial Class RemoteAppCreateClientConnection
         Me.SaveButton.Name = "SaveButton"
         Me.SaveButton.Size = New System.Drawing.Size(108, 29)
         Me.SaveButton.TabIndex = 6
-        Me.SaveButton.Text = "Save settings"
+        Me.SaveButton.Text = "保存设置"
         Me.SaveButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.SaveButton.UseVisualStyleBackColor = False
         '
@@ -462,7 +462,7 @@ Partial Class RemoteAppCreateClientConnection
         Me.FTACountLabel.Name = "FTACountLabel"
         Me.FTACountLabel.Size = New System.Drawing.Size(52, 15)
         Me.FTACountLabel.TabIndex = 1
-        Me.FTACountLabel.Text = "Count: 0"
+        Me.FTACountLabel.Text = "数量：0"
         '
         'DisabledFTACheckBox
         '
@@ -471,7 +471,7 @@ Partial Class RemoteAppCreateClientConnection
         Me.DisabledFTACheckBox.Name = "DisabledFTACheckBox"
         Me.DisabledFTACheckBox.Size = New System.Drawing.Size(71, 19)
         Me.DisabledFTACheckBox.TabIndex = 0
-        Me.DisabledFTACheckBox.Text = "Disabled"
+        Me.DisabledFTACheckBox.Text = "禁用"
         Me.DisabledFTACheckBox.UseVisualStyleBackColor = True
         '
         'CheckBoxCreateSignedAndUnsigned
@@ -481,7 +481,7 @@ Partial Class RemoteAppCreateClientConnection
         Me.CheckBoxCreateSignedAndUnsigned.Name = "CheckBoxCreateSignedAndUnsigned"
         Me.CheckBoxCreateSignedAndUnsigned.Size = New System.Drawing.Size(175, 19)
         Me.CheckBoxCreateSignedAndUnsigned.TabIndex = 1
-        Me.CheckBoxCreateSignedAndUnsigned.Text = "Create Signed and Unsigned"
+        Me.CheckBoxCreateSignedAndUnsigned.Text = "同时创建已签名和未签名文件"
         Me.CheckBoxCreateSignedAndUnsigned.UseVisualStyleBackColor = True
         '
         'CertificateComboBox
@@ -501,7 +501,7 @@ Partial Class RemoteAppCreateClientConnection
         Me.CertificateLabel.Name = "CertificateLabel"
         Me.CertificateLabel.Size = New System.Drawing.Size(64, 15)
         Me.CertificateLabel.TabIndex = 2
-        Me.CertificateLabel.Text = "Certificate:"
+        Me.CertificateLabel.Text = "证书："
         '
         'CheckBoxSignRDPEnabled
         '
@@ -510,7 +510,7 @@ Partial Class RemoteAppCreateClientConnection
         Me.CheckBoxSignRDPEnabled.Name = "CheckBoxSignRDPEnabled"
         Me.CheckBoxSignRDPEnabled.Size = New System.Drawing.Size(93, 19)
         Me.CheckBoxSignRDPEnabled.TabIndex = 0
-        Me.CheckBoxSignRDPEnabled.Text = "Sign RDP file"
+        Me.CheckBoxSignRDPEnabled.Text = "对 RDP 文件签名"
         Me.CheckBoxSignRDPEnabled.UseVisualStyleBackColor = True
         '
         'TabControl
@@ -540,7 +540,7 @@ Partial Class RemoteAppCreateClientConnection
         Me.HostTabPage.Padding = New System.Windows.Forms.Padding(3)
         Me.HostTabPage.Size = New System.Drawing.Size(484, 109)
         Me.HostTabPage.TabIndex = 0
-        Me.HostTabPage.Text = "Host"
+        Me.HostTabPage.Text = "主机"
         Me.HostTabPage.UseVisualStyleBackColor = True
         '
         'OptionsTabPage
@@ -555,7 +555,7 @@ Partial Class RemoteAppCreateClientConnection
         Me.OptionsTabPage.Padding = New System.Windows.Forms.Padding(3)
         Me.OptionsTabPage.Size = New System.Drawing.Size(484, 109)
         Me.OptionsTabPage.TabIndex = 1
-        Me.OptionsTabPage.Text = "Options"
+        Me.OptionsTabPage.Text = "选项"
         Me.OptionsTabPage.UseVisualStyleBackColor = True
         '
         'RDPOptionsButton
@@ -567,7 +567,7 @@ Partial Class RemoteAppCreateClientConnection
         Me.RDPOptionsButton.Name = "RDPOptionsButton"
         Me.RDPOptionsButton.Size = New System.Drawing.Size(118, 29)
         Me.RDPOptionsButton.TabIndex = 5
-        Me.RDPOptionsButton.Text = "RDP options..."
+        Me.RDPOptionsButton.Text = "RDP 选项..."
         Me.RDPOptionsButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.RDPOptionsButton.UseVisualStyleBackColor = False
         '
@@ -582,7 +582,7 @@ Partial Class RemoteAppCreateClientConnection
         Me.GatewayTabPage.Padding = New System.Windows.Forms.Padding(3)
         Me.GatewayTabPage.Size = New System.Drawing.Size(484, 109)
         Me.GatewayTabPage.TabIndex = 2
-        Me.GatewayTabPage.Text = "Gateway"
+        Me.GatewayTabPage.Text = "网关"
         Me.GatewayTabPage.UseVisualStyleBackColor = True
         '
         'FileTypesTabPage
@@ -595,7 +595,7 @@ Partial Class RemoteAppCreateClientConnection
         Me.FileTypesTabPage.Padding = New System.Windows.Forms.Padding(3)
         Me.FileTypesTabPage.Size = New System.Drawing.Size(484, 109)
         Me.FileTypesTabPage.TabIndex = 3
-        Me.FileTypesTabPage.Text = "File types"
+        Me.FileTypesTabPage.Text = "文件类型"
         Me.FileTypesTabPage.UseVisualStyleBackColor = True
         '
         'MSIOptionsTabPage
@@ -616,7 +616,7 @@ Partial Class RemoteAppCreateClientConnection
         Me.MSIOptionsTabPage.Padding = New System.Windows.Forms.Padding(3)
         Me.MSIOptionsTabPage.Size = New System.Drawing.Size(484, 109)
         Me.MSIOptionsTabPage.TabIndex = 4
-        Me.MSIOptionsTabPage.Text = "MSI options"
+        Me.MSIOptionsTabPage.Text = "MSI 选项"
         Me.MSIOptionsTabPage.UseVisualStyleBackColor = True
         '
         'SigningTabPage
@@ -631,7 +631,7 @@ Partial Class RemoteAppCreateClientConnection
         Me.SigningTabPage.Padding = New System.Windows.Forms.Padding(3)
         Me.SigningTabPage.Size = New System.Drawing.Size(484, 109)
         Me.SigningTabPage.TabIndex = 5
-        Me.SigningTabPage.Text = "Signing"
+        Me.SigningTabPage.Text = "签名"
         Me.SigningTabPage.UseVisualStyleBackColor = True
         '
         'RdpsignErrorLabel
@@ -642,7 +642,7 @@ Partial Class RemoteAppCreateClientConnection
         Me.RdpsignErrorLabel.Name = "RdpsignErrorLabel"
         Me.RdpsignErrorLabel.Size = New System.Drawing.Size(472, 21)
         Me.RdpsignErrorLabel.TabIndex = 4
-        Me.RdpsignErrorLabel.Text = "RdpsignErrorLabel"
+        Me.RdpsignErrorLabel.Text = ""
         Me.RdpsignErrorLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'RemoteAppCreateClientConnection
@@ -665,7 +665,7 @@ Partial Class RemoteAppCreateClientConnection
         Me.MinimizeBox = False
         Me.Name = "RemoteAppCreateClientConnection"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
-        Me.Text = "RemoteAppCreateClientConnection"
+        Me.Text = "创建客户端连接"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.TabControl.ResumeLayout(False)

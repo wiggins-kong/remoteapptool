@@ -79,7 +79,7 @@ Partial Class RemoteAppEditWindow
         Me.TSWAbox.BackColor = System.Drawing.Color.WhiteSmoke
         Me.TSWAbox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.TSWAbox.FormattingEnabled = True
-        Me.TSWAbox.Items.AddRange(New Object() {"No", "Yes"})
+        Me.TSWAbox.Items.AddRange(New Object() {"否", "是"})
         Me.TSWAbox.Location = New System.Drawing.Point(318, 22)
         Me.TSWAbox.Name = "TSWAbox"
         Me.TSWAbox.Size = New System.Drawing.Size(81, 23)
@@ -90,7 +90,7 @@ Partial Class RemoteAppEditWindow
         Me.CommandLineOptionCombo.BackColor = System.Drawing.Color.WhiteSmoke
         Me.CommandLineOptionCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CommandLineOptionCombo.FormattingEnabled = True
-        Me.CommandLineOptionCombo.Items.AddRange(New Object() {"Disabled", "Optional", "Enforced"})
+        Me.CommandLineOptionCombo.Items.AddRange(New Object() {"禁用", "可选", "强制"})
         Me.CommandLineOptionCombo.Location = New System.Drawing.Point(139, 22)
         Me.CommandLineOptionCombo.Name = "CommandLineOptionCombo"
         Me.CommandLineOptionCombo.Size = New System.Drawing.Size(81, 23)
@@ -114,7 +114,7 @@ Partial Class RemoteAppEditWindow
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(82, 15)
         Me.Label10.TabIndex = 2
-        Me.Label10.Text = "TSWebAccess:"
+        Me.Label10.Text = "TSWebAccess："
         '
         'Label8
         '
@@ -123,7 +123,7 @@ Partial Class RemoteAppEditWindow
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(127, 15)
         Me.Label8.TabIndex = 0
-        Me.Label8.Text = "Command line option:"
+        Me.Label8.Text = "命令行选项："
         '
         'Label6
         '
@@ -133,7 +133,7 @@ Partial Class RemoteAppEditWindow
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(151, 15)
         Me.Label6.TabIndex = 4
-        Me.Label6.Text = "Command line parameters:"
+        Me.Label6.Text = "命令行参数："
         '
         'CancelEditButton
         '
@@ -147,24 +147,24 @@ Partial Class RemoteAppEditWindow
         Me.CancelEditButton.Name = "CancelEditButton"
         Me.CancelEditButton.Size = New System.Drawing.Size(75, 29)
         Me.CancelEditButton.TabIndex = 3
-        Me.CancelEditButton.Text = "Cancel"
+        Me.CancelEditButton.Text = "取消"
         Me.CancelEditButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.CancelEditButton.UseVisualStyleBackColor = False
         '
         'FileBrowserPath
         '
-        Me.FileBrowserPath.Filter = "Programs|*.exe;*.com;*.cmd;*.bat|All files|*.*"
-        Me.FileBrowserPath.Title = "Browse..."
+        Me.FileBrowserPath.Filter = "程序|*.exe;*.com;*.cmd;*.bat|所有文件|*.*"
+        Me.FileBrowserPath.Title = "浏览..."
         '
         'FileBrowserIcon
         '
-        Me.FileBrowserIcon.Filter = "Icons|*.exe;*.dll;*.ico|All files|*.*"
-        Me.FileBrowserIcon.Title = "Browse..."
+        Me.FileBrowserIcon.Filter = "图标|*.exe;*.dll;*.ico|所有文件|*.*"
+        Me.FileBrowserIcon.Title = "浏览..."
         '
         'FileBrowserVPath
         '
-        Me.FileBrowserVPath.Filter = "Programs|*.exe;*.com;*.cmd;*.bat|All files|*.*"
-        Me.FileBrowserVPath.Title = "Browse..."
+        Me.FileBrowserVPath.Filter = "程序|*.exe;*.com;*.cmd;*.bat|所有文件|*.*"
+        Me.FileBrowserVPath.Title = "浏览..."
         '
         'SaveButton
         '
@@ -177,7 +177,7 @@ Partial Class RemoteAppEditWindow
         Me.SaveButton.Name = "SaveButton"
         Me.SaveButton.Size = New System.Drawing.Size(67, 29)
         Me.SaveButton.TabIndex = 4
-        Me.SaveButton.Text = "Save"
+        Me.SaveButton.Text = "保存"
         Me.SaveButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.SaveButton.UseVisualStyleBackColor = False
         '
@@ -193,7 +193,7 @@ Partial Class RemoteAppEditWindow
         Me.FTAButton.Name = "FTAButton"
         Me.FTAButton.Size = New System.Drawing.Size(236, 29)
         Me.FTAButton.TabIndex = 7
-        Me.FTAButton.Text = "Configure..."
+        Me.FTAButton.Text = "配置..."
         Me.FTAButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.FTAButton.UseVisualStyleBackColor = False
         '
@@ -210,7 +210,7 @@ Partial Class RemoteAppEditWindow
         Me.GroupBox1.Size = New System.Drawing.Size(405, 91)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Title"
+        Me.GroupBox1.Text = "标题"
         '
         'FullNameText
         '
@@ -237,7 +237,7 @@ Partial Class RemoteAppEditWindow
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(62, 15)
         Me.Label3.TabIndex = 2
-        Me.Label3.Text = "Full name:"
+        Me.Label3.Text = "完整名称："
         '
         'Label12
         '
@@ -246,7 +246,7 @@ Partial Class RemoteAppEditWindow
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(42, 15)
         Me.Label12.TabIndex = 0
-        Me.Label12.Text = "Name:"
+        Me.Label12.Text = "名称："
         '
         'GroupBox2
         '
@@ -266,7 +266,7 @@ Partial Class RemoteAppEditWindow
         Me.GroupBox2.Size = New System.Drawing.Size(405, 116)
         Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Files"
+        Me.GroupBox2.Text = "文件"
         '
         'BrowseIconPath
         '
@@ -293,7 +293,7 @@ Partial Class RemoteAppEditWindow
         Me.IconResetButton.Name = "IconResetButton"
         Me.IconResetButton.Size = New System.Drawing.Size(87, 29)
         Me.IconResetButton.TabIndex = 8
-        Me.IconResetButton.Text = "Reset icon"
+        Me.IconResetButton.Text = "重置图标"
         Me.IconResetButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.IconResetButton.UseVisualStyleBackColor = False
         '
@@ -315,7 +315,7 @@ Partial Class RemoteAppEditWindow
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(65, 15)
         Me.Label11.TabIndex = 6
-        Me.Label11.Text = "Icon Index:"
+        Me.Label11.Text = "图标索引："
         '
         'Label7
         '
@@ -325,7 +325,7 @@ Partial Class RemoteAppEditWindow
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(60, 15)
         Me.Label7.TabIndex = 3
-        Me.Label7.Text = "Icon path:"
+        Me.Label7.Text = "图标路径："
         '
         'PathText
         '
@@ -352,7 +352,7 @@ Partial Class RemoteAppEditWindow
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(59, 15)
         Me.Label4.TabIndex = 0
-        Me.Label4.Text = "App path:"
+        Me.Label4.Text = "应用路径："
         '
         'BrowsePath
         '
@@ -383,7 +383,7 @@ Partial Class RemoteAppEditWindow
         Me.GroupBox3.Size = New System.Drawing.Size(405, 119)
         Me.GroupBox3.TabIndex = 2
         Me.GroupBox3.TabStop = False
-        Me.GroupBox3.Text = "Options"
+        Me.GroupBox3.Text = "选项"
         '
         'Label1
         '
@@ -393,7 +393,7 @@ Partial Class RemoteAppEditWindow
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(121, 15)
         Me.Label1.TabIndex = 6
-        Me.Label1.Text = "File type associations:"
+        Me.Label1.Text = "文件类型关联："
         '
         'RemoteAppEditWindow
         '
@@ -416,7 +416,7 @@ Partial Class RemoteAppEditWindow
         Me.MinimumSize = New System.Drawing.Size(445, 430)
         Me.Name = "RemoteAppEditWindow"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
-        Me.Text = "RemoteAppEditWindow"
+        Me.Text = "RemoteApp 属性"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)

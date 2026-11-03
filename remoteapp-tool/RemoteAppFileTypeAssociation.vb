@@ -4,7 +4,7 @@
 
     Public Function EditFileTypes(SelectedRemoteApp As RemoteAppLib.RemoteApp) As RemoteAppLib.RemoteApp
         RemoteApp = SelectedRemoteApp
-        Me.Text = "File type associations for " & RemoteApp.Name
+        Me.Text = RemoteApp.Name & " 的文件类型关联"
         HelpSystem.SetupTips(Me)
         LoadFTAs()
         Me.ShowDialog()
@@ -36,14 +36,14 @@
                 Dim ftaStatus As String
                 If LocalFtaModule.DoesFTAExist(fta.Extension) Then
                     'FTA exists - created by another app
-                    ftaStatus = "Existing"
+                    ftaStatus = "其他程序"
                     If LocalFtaModule.IsFTAMine(fta.Extension) Then
                         'FTA exists - created by RemoteApp Tool
-                        ftaStatus = "Yes"
+                        ftaStatus = "本工具"
                     End If
                 Else
                     'FTA does not exist
-                    ftaStatus = "No"
+                    ftaStatus = "无"
                 End If
 
 
@@ -73,7 +73,7 @@
             If Not SameFTA Then
                 RemoteApp.FileTypeAssociations.Add(FTA)
             Else
-                MessageBox.Show("There is already an association for filetype: " & FTA.Extension, "Error", MessageBoxButtons.OK, MessageBoxIcon.Stop)
+                MessageBox.Show("该文件类型已存在关联：" & FTA.Extension, "错误", MessageBoxButtons.OK, MessageBoxIcon.Stop)
             End If
 
         End If
@@ -108,7 +108,7 @@
 
     Private Sub DeleteButton_Click(sender As Object, e As EventArgs) Handles DeleteButton.Click
         Dim FileType = FTAListView.SelectedItems(0).Text
-        If MessageBox.Show("Are you sure you want to remove filetype:" & vbCrLf & "." & FileType & " ?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) = Windows.Forms.DialogResult.Yes Then
+        If MessageBox.Show("确定要移除文件类型：" & vbCrLf & "." & FileType & " 吗？", "确认", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) = Windows.Forms.DialogResult.Yes Then
             Dim IconPath = FTAListView.SelectedItems(0).SubItems(0).Text
             Dim IconIndex = FTAListView.SelectedItems(0).SubItems(1).Text
             Dim FTAtoRemove As New RemoteAppLib.FileTypeAssociation
@@ -158,19 +158,16 @@
             'An existing association was found
             If Not IsFTAMine(fta.Extension) Then
                 'FTA found and belongs to another application (replace?)
-                MsgBoxResult = MessageBox.Show("An association already exists on the local computer for filetype. " & _
-                                                    "Would you like to replace it?" & vbCrLf & vbCrLf & _
-                                                    "Warning: This association was created by another application. " & _
-                                                    "Replacing it can cause problems. " & _
-                                                    "If the existing association is working, there is no need to replace it.", _
-                                                    "File Type Association", _
+                MsgBoxResult = MessageBox.Show("本地计算机上已存在此文件类型的关联。是否替换？" & vbCrLf & vbCrLf & _
+                                                    "警告：此关联由其他应用程序创建。替换它可能导致问题。如果现有关联工作正常，则无需替换。", _
+                                                    "文件类型关联", _
                                                     MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation)
                 If MsgBoxResult = Windows.Forms.DialogResult.Yes Then _
                     LocalFtaModule.CreateFTA(fta, RemoteApp.Path, RemoteApp.Name, True)
             Else
                 'FTA found and belongs to RemoteApp Tool (remove)
-                MsgBoxResult = MessageBox.Show("Are you sure you want to remove this file type association on the local computer?", _
-                                                    "File Type Association", _
+                MsgBoxResult = MessageBox.Show("确定要移除本地计算机上的此文件类型关联吗？", _
+                                                    "文件类型关联", _
                                                     MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation)
                 If MsgBoxResult = Windows.Forms.DialogResult.Yes Then _
                     LocalFtaModule.DeleteFTA(fta.Extension)
@@ -179,9 +176,9 @@
         Else
             'FTA not found (create)
             If LocalFtaModule.CreateFTA(fta, RemoteApp.Path, RemoteApp.Name) = True Then
-                MessageBox.Show("File type association created for " & fta.Extension & ".", "File Type Association", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                MessageBox.Show("已为 " & fta.Extension & " 创建文件类型关联。", "文件类型关联", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Else
-                MessageBox.Show("File type association not created. There was an error.", "File Type Association", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                MessageBox.Show("文件类型关联未创建。发生错误。", "文件类型关联", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End If
 
         End If

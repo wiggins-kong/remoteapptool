@@ -79,10 +79,10 @@ Public Class RDP
         If Not rdpInTemp Then
             FileLocked = LockCheck.CheckLock(rdpTempPath)
             While Not (FileLocked = "No locks")
-                If (MessageBox.Show("The file " + rdpTempPath + " is currently locked.  Lock information:" + FileLocked + vbNewLine + "Do you want to try again?", "File Locked", MessageBoxButtons.YesNo) = DialogResult.Yes) Then
+                If (MessageBox.Show("文件 " + rdpTempPath + " 当前被锁定。锁定信息：" + FileLocked + vbNewLine + "是否重试？", "文件已锁定", MessageBoxButtons.YesNo) = DialogResult.Yes) Then
                     FileLocked = LockCheck.CheckLock(rdpTempPath)
                 Else
-                    MessageBox.Show("The following file will not be deleted:" + vbNewLine + rdpTempPath)
+                    MessageBox.Show("以下文件将不会被删除：" + vbNewLine + rdpTempPath)
                     SkipFile = True
                     FileLocked = "No locks"
                 End If
@@ -95,10 +95,10 @@ Public Class RDP
             If hasIcon Then
                 FileLocked = LockCheck.CheckLock(icoTempPath)
                 While Not (FileLocked = "No locks")
-                    If (MessageBox.Show("The file " + icoTempPath + " is currently locked.  Lock information:" + FileLocked + vbNewLine + "Do you want to try again?", "File Locked", MessageBoxButtons.YesNo) = DialogResult.Yes) Then
+                    If (MessageBox.Show("文件 " + icoTempPath + " 当前被锁定。锁定信息：" + FileLocked + vbNewLine + "是否重试？", "文件已锁定", MessageBoxButtons.YesNo) = DialogResult.Yes) Then
                         FileLocked = LockCheck.CheckLock(icoTempPath)
                     Else
-                        MessageBox.Show("The following file will not be deleted:" + vbNewLine + icoTempPath)
+                        MessageBox.Show("以下文件将不会被删除：" + vbNewLine + icoTempPath)
                         SkipFile = True
                         FileLocked = "No locks"
                     End If
@@ -128,10 +128,10 @@ Public Class RDP
         'Move MSI file to destination and delete temp files
         FileLocked = LockCheck.CheckLock(DestinationPath)
         While Not (FileLocked = "No locks")
-            If (MessageBox.Show("The file " + DestinationPath + " is currently locked.  Lock information:" + FileLocked + vbNewLine + "Do you want to try again?", "File Locked", MessageBoxButtons.YesNo) = DialogResult.Yes) Then
+            If (MessageBox.Show("文件 " + DestinationPath + " 当前被锁定。锁定信息：" + FileLocked + vbNewLine + "是否重试？", "文件已锁定", MessageBoxButtons.YesNo) = DialogResult.Yes) Then
                 FileLocked = LockCheck.CheckLock(DestinationPath)
             Else
-                MessageBox.Show("The following file will not be deleted:" + vbNewLine + DestinationPath)
+                MessageBox.Show("以下文件将不会被删除：" + vbNewLine + DestinationPath)
                 SkipFile = True
                 FileLocked = "No locks"
             End If
@@ -172,10 +172,10 @@ Public Class RDP
             Dim SkipFile As Boolean = False
             FileLocked = LockCheck.CheckLock(dFile)
             While Not (FileLocked = "No locks")
-                If (MessageBox.Show("The file " + dFile + " is currently locked.  Lock information:" + FileLocked + vbNewLine + "Do you want to try again?", "File Locked", MessageBoxButtons.YesNo) = DialogResult.Yes) Then
+                If (MessageBox.Show("文件 " + dFile + " 当前被锁定。锁定信息：" + FileLocked + vbNewLine + "是否重试？", "文件已锁定", MessageBoxButtons.YesNo) = DialogResult.Yes) Then
                     FileLocked = LockCheck.CheckLock(dFile)
                 Else
-                    MessageBox.Show("The following file will not be deleted:" + vbNewLine + dFile)
+                    MessageBox.Show("以下文件将不会被删除：" + vbNewLine + dFile)
                     SkipFile = True
                     FileLocked = "No locks"
                 End If

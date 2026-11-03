@@ -8,7 +8,7 @@
         Me.IconIndexLabel.Visible = False
         Me.IconIndexTextBox.Visible = False
 
-        Me.Text = "Select Icon"
+        Me.Text = "选择图标"
 
         Me.IconPathTextBox.Text = DefaultPath
         Me.IconIndexTextBox.Text = DefaultIndex.ToString
@@ -43,7 +43,7 @@
             FileTypeTextBox.ReadOnly = False
         End If
 
-        Me.Text = "File Type"
+        Me.Text = "文件类型"
 
         Me.FileTypeTextBox.Text = FileType
         Me.IconPathTextBox.Text = DefaultPath
@@ -82,7 +82,7 @@
                 IconError = True
                 NoValidate = True
                 Me.OKButton.Enabled = True
-                MessageBox.Show("There was an error loading icons from:" & vbCrLf & Me.IconPathTextBox.Text & vbCrLf & "Icons may still be usable, but you can not select one using the icon picker.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                MessageBox.Show("加载图标时出错：" & vbCrLf & Me.IconPathTextBox.Text & vbCrLf & "图标可能仍可使用，但无法通过图标选择器选择。", "警告", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                 Me.IconIndexTextBox.Text = "0"
                 Me.IconIndexTextBox.ReadOnly = False
             End Try

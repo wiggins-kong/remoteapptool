@@ -4,9 +4,9 @@ Imports System.Reflection
 Public Class RemoteAppAboutWindow
 
     Private Sub RemoteAppAboutWindow_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Me.Text = "About " & My.Application.Info.Title
+        Me.Text = "关于 " & My.Application.Info.Title
         Me.TitleLabel.Text = My.Application.Info.Title
-        Me.VersionLabel.Text = "Version " & My.Application.Info.Version.ToString
+        Me.VersionLabel.Text = "版本 " & My.Application.Info.Version.ToString
         Me.CopyrightLabel.Text = My.Application.Info.CompanyName.ToString
     End Sub
 

@@ -87,44 +87,44 @@ Partial Class RemoteAppMainWindow
         '
         'ShortName
         '
-        Me.ShortName.Text = "ShortName"
+        Me.ShortName.Text = "短名称"
         Me.ShortName.Width = 200
         '
         'Title
         '
-        Me.Title.Text = "Name"
+        Me.Title.Text = "名称"
         '
         'Path
         '
-        Me.Path.Text = "Path"
+        Me.Path.Text = "路径"
         '
         'VPath
         '
-        Me.VPath.Text = "VPath"
+        Me.VPath.Text = "虚拟路径"
         '
         'RequiredCommandLine
         '
-        Me.RequiredCommandLine.Text = "RequiredCommandLine"
+        Me.RequiredCommandLine.Text = "必需命令行"
         '
         'CommandLineSetting
         '
-        Me.CommandLineSetting.Text = "CommandLineSetting"
+        Me.CommandLineSetting.Text = "命令行设置"
         '
         'IconPath
         '
-        Me.IconPath.Text = "IconPath"
+        Me.IconPath.Text = "图标路径"
         '
         'IconIndex
         '
-        Me.IconIndex.Text = "IconIndex"
+        Me.IconIndex.Text = "图标索引"
         '
         'SecurityDescriptor
         '
-        Me.SecurityDescriptor.Text = "SecurityDescriptor"
+        Me.SecurityDescriptor.Text = "安全描述符"
         '
         'ShowInTSWA
         '
-        Me.ShowInTSWA.Text = "ShowInTSWA"
+        Me.ShowInTSWA.Text = "在 TSWebAccess 中显示"
         '
         'SmallIcons
         '
@@ -154,7 +154,7 @@ Partial Class RemoteAppMainWindow
         Me.NoAppsLabel.Name = "NoAppsLabel"
         Me.NoAppsLabel.Size = New System.Drawing.Size(410, 58)
         Me.NoAppsLabel.TabIndex = 0
-        Me.NoAppsLabel.Text = "There are no RemoteApps hosted on this computer." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Click + to add one."
+        Me.NoAppsLabel.Text = "此计算机上未托管任何 RemoteApp。" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "单击 + 添加一个。"
         Me.NoAppsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.NoAppsLabel.Visible = False
         '
@@ -230,7 +230,7 @@ Partial Class RemoteAppMainWindow
         Me.CreateClientConnection.Name = "CreateClientConnection"
         Me.CreateClientConnection.Size = New System.Drawing.Size(208, 30)
         Me.CreateClientConnection.TabIndex = 6
-        Me.CreateClientConnection.Text = "Create Client Connection..."
+        Me.CreateClientConnection.Text = "创建客户端连接..."
         Me.CreateClientConnection.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.CreateClientConnection.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.CreateClientConnection.UseVisualStyleBackColor = False
@@ -253,19 +253,19 @@ Partial Class RemoteAppMainWindow
         Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewRemoteAppadvancedToolStripMenuItem, Me.DuplicateToolStripMenuItem, Me.ToolStripSeparator2, Me.ExitToolStripMenuItem})
         Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
         Me.FileToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
-        Me.FileToolStripMenuItem.Text = "File"
+        Me.FileToolStripMenuItem.Text = "文件(&F)"
         '
         'NewRemoteAppadvancedToolStripMenuItem
         '
         Me.NewRemoteAppadvancedToolStripMenuItem.Name = "NewRemoteAppadvancedToolStripMenuItem"
         Me.NewRemoteAppadvancedToolStripMenuItem.Size = New System.Drawing.Size(235, 22)
-        Me.NewRemoteAppadvancedToolStripMenuItem.Text = "New RemoteApp (advanced)..."
+        Me.NewRemoteAppadvancedToolStripMenuItem.Text = "新建 RemoteApp（高级）..."
         '
         'DuplicateToolStripMenuItem
         '
         Me.DuplicateToolStripMenuItem.Name = "DuplicateToolStripMenuItem"
         Me.DuplicateToolStripMenuItem.Size = New System.Drawing.Size(235, 22)
-        Me.DuplicateToolStripMenuItem.Text = "Duplicate RemoteApp"
+        Me.DuplicateToolStripMenuItem.Text = "复制 RemoteApp"
         '
         'ToolStripSeparator2
         '
@@ -276,20 +276,20 @@ Partial Class RemoteAppMainWindow
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
         Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(235, 22)
-        Me.ExitToolStripMenuItem.Text = "Exit"
+        Me.ExitToolStripMenuItem.Text = "退出"
         '
         'ToolsToolStripMenuItem
         '
         Me.ToolsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HostOptionsToolStripMenuItem, Me.ToolStripSeparator3, Me.RemoveUnusedFileTypeAssociationsToolStripMenuItem, Me.BackupAllRemoteAppsToolStripMenuItem})
         Me.ToolsToolStripMenuItem.Name = "ToolsToolStripMenuItem"
         Me.ToolsToolStripMenuItem.Size = New System.Drawing.Size(46, 20)
-        Me.ToolsToolStripMenuItem.Text = "&Tools"
+        Me.ToolsToolStripMenuItem.Text = "工具(&T)"
         '
         'HostOptionsToolStripMenuItem
         '
         Me.HostOptionsToolStripMenuItem.Name = "HostOptionsToolStripMenuItem"
         Me.HostOptionsToolStripMenuItem.Size = New System.Drawing.Size(280, 22)
-        Me.HostOptionsToolStripMenuItem.Text = "Host Options..."
+        Me.HostOptionsToolStripMenuItem.Text = "主机选项..."
         '
         'ToolStripSeparator3
         '
@@ -300,26 +300,26 @@ Partial Class RemoteAppMainWindow
         '
         Me.RemoveUnusedFileTypeAssociationsToolStripMenuItem.Name = "RemoveUnusedFileTypeAssociationsToolStripMenuItem"
         Me.RemoveUnusedFileTypeAssociationsToolStripMenuItem.Size = New System.Drawing.Size(280, 22)
-        Me.RemoveUnusedFileTypeAssociationsToolStripMenuItem.Text = "Remove unused file type associations..."
+        Me.RemoveUnusedFileTypeAssociationsToolStripMenuItem.Text = "移除未使用的文件类型关联..."
         '
         'BackupAllRemoteAppsToolStripMenuItem
         '
         Me.BackupAllRemoteAppsToolStripMenuItem.Name = "BackupAllRemoteAppsToolStripMenuItem"
         Me.BackupAllRemoteAppsToolStripMenuItem.Size = New System.Drawing.Size(280, 22)
-        Me.BackupAllRemoteAppsToolStripMenuItem.Text = "Backup all RemoteApps..."
+        Me.BackupAllRemoteAppsToolStripMenuItem.Text = "备份所有 RemoteApp..."
         '
         'HelpToolStripMenuItem
         '
         Me.HelpToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.WebsiteToolStripMenuItem, Me.ToolStripSeparator1, Me.AboutToolStripMenuItem})
         Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
         Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
-        Me.HelpToolStripMenuItem.Text = "&Help"
+        Me.HelpToolStripMenuItem.Text = "帮助(&H)"
         '
         'WebsiteToolStripMenuItem
         '
         Me.WebsiteToolStripMenuItem.Name = "WebsiteToolStripMenuItem"
         Me.WebsiteToolStripMenuItem.Size = New System.Drawing.Size(116, 22)
-        Me.WebsiteToolStripMenuItem.Text = "Website"
+        Me.WebsiteToolStripMenuItem.Text = "网站"
         '
         'ToolStripSeparator1
         '
@@ -330,7 +330,7 @@ Partial Class RemoteAppMainWindow
         '
         Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
         Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(116, 22)
-        Me.AboutToolStripMenuItem.Text = "About..."
+        Me.AboutToolStripMenuItem.Text = "关于..."
         '
         'PictureBox1
         '
@@ -347,7 +347,7 @@ Partial Class RemoteAppMainWindow
         'BackupSaveFileDialog
         '
         Me.BackupSaveFileDialog.DefaultExt = "reg"
-        Me.BackupSaveFileDialog.Filter = "Windows Registry file|*.reg"
+        Me.BackupSaveFileDialog.Filter = "Windows 注册表文件|*.reg"
         '
         'RemoteAppMainWindow
         '

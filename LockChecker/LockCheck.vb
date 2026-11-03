@@ -176,7 +176,7 @@ Module LockCheck
 
         Dim res As Integer = RmStartSession(handle, 0, sessionkey)
         If res <> 0 Then
-            Throw New Exception("Could not begin restart session.")
+            Throw New Exception("无法启动重启会话。")
         End If
 
         Try
@@ -189,7 +189,7 @@ Module LockCheck
             res = RmRegisterResources(handle, CUInt(resources.Length), resources, 0, Nothing, 0,
                 Nothing)
             If res <> 0 Then
-                Throw New Exception("Could not register resource.")
+                Throw New Exception("无法注册资源。")
             End If
 
             res = RmGetList(handle, pnProcInfoNeeded, pnProcInfo, processInfo, lpdwRebootReasons)
@@ -199,10 +199,10 @@ Module LockCheck
                 If pnProcInfo <> 0 Then
                     For i As Integer = 0 To pnProcInfo - 1
                         'Console.WriteLine("File Name :" + resources(0))
-                        result = result + "File Name :" + resources(0) + vbNewLine
+                        result = result + "文件名：" + resources(0) + vbNewLine
                         'Console.WriteLine("Application locking the file :" + processInfo(i).strAppName)
-                        result = result + "Application locking the file : " + processInfo(i).strAppName + vbNewLine
-                        result = result + "PID of process locking the file: " + processInfo(i).Process.dwProcessId.ToString() + vbNewLine
+                        result = result + "锁定文件的应用程序：" + processInfo(i).strAppName + vbNewLine
+                        result = result + "锁定文件的进程 PID：" + processInfo(i).Process.dwProcessId.ToString() + vbNewLine
                     Next
                 Else
                     'Console.WriteLine("The specified file '{0}' is not locked by any process", resources(0))
@@ -210,7 +210,7 @@ Module LockCheck
 
                 End If
             Else
-                Throw New Exception("Could not list processes locking resource.")
+                Throw New Exception("无法列出锁定资源的进程。")
             End If
 
             If res <> 0 Then

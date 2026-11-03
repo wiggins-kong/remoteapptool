@@ -94,10 +94,10 @@ Public Class RDPFile
         Dim SkipFile As Boolean = False
         FileLocked = LockCheck.CheckLock(FilePath)
         While Not (FileLocked = "No locks")
-            If (MessageBox.Show("The file " + FilePath + " is currently locked.  Lock information:" + FileLocked + vbNewLine + "Do you want to try again?", "File Locked", MessageBoxButtons.YesNo) = DialogResult.Yes) Then
+            If (MessageBox.Show("文件 " + FilePath + " 当前被锁定。锁定信息：" + FileLocked + vbNewLine + "是否重试？", "文件已锁定", MessageBoxButtons.YesNo) = DialogResult.Yes) Then
                 FileLocked = LockCheck.CheckLock(FilePath)
             Else
-                MessageBox.Show("The following file will not be copied:" + vbNewLine + FilePath)
+                MessageBox.Show("以下文件将不会被复制：" + vbNewLine + FilePath)
                 SkipFile = True
                 FileLocked = "No locks"
             End If

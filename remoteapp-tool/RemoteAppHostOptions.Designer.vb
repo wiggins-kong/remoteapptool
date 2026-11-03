@@ -46,7 +46,7 @@ Partial Class RemoteAppHostOptions
         Me.TimeoutDisconnectedCheckBox.Name = "TimeoutDisconnectedCheckBox"
         Me.TimeoutDisconnectedCheckBox.Size = New System.Drawing.Size(211, 19)
         Me.TimeoutDisconnectedCheckBox.TabIndex = 2
-        Me.TimeoutDisconnectedCheckBox.Text = "Timeout for disconnected sessions:"
+        Me.TimeoutDisconnectedCheckBox.Text = "断开连接的会话超时："
         Me.TimeoutDisconnectedCheckBox.UseVisualStyleBackColor = True
         '
         'DisableAllowListCheckBox
@@ -56,7 +56,7 @@ Partial Class RemoteAppHostOptions
         Me.DisableAllowListCheckBox.Name = "DisableAllowListCheckBox"
         Me.DisableAllowListCheckBox.Size = New System.Drawing.Size(137, 19)
         Me.DisableAllowListCheckBox.TabIndex = 0
-        Me.DisableAllowListCheckBox.Text = "Disable AppAllowList"
+        Me.DisableAllowListCheckBox.Text = "禁用 AppAllowList"
         Me.DisableAllowListCheckBox.UseVisualStyleBackColor = True
         '
         'DisconnectTimeTextBox
@@ -75,7 +75,7 @@ Partial Class RemoteAppHostOptions
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(50, 15)
         Me.Label1.TabIndex = 4
-        Me.Label1.Text = "seconds"
+        Me.Label1.Text = "秒"
         '
         'TimeoutIdleCheckBox
         '
@@ -84,7 +84,7 @@ Partial Class RemoteAppHostOptions
         Me.TimeoutIdleCheckBox.Name = "TimeoutIdleCheckBox"
         Me.TimeoutIdleCheckBox.Size = New System.Drawing.Size(159, 19)
         Me.TimeoutIdleCheckBox.TabIndex = 5
-        Me.TimeoutIdleCheckBox.Text = "Timeout for idle sessions:"
+        Me.TimeoutIdleCheckBox.Text = "空闲会话超时："
         Me.TimeoutIdleCheckBox.UseVisualStyleBackColor = True
         '
         'IdleTimeTextBox
@@ -103,7 +103,7 @@ Partial Class RemoteAppHostOptions
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(50, 15)
         Me.Label2.TabIndex = 7
-        Me.Label2.Text = "seconds"
+        Me.Label2.Text = "秒"
         '
         'LogoffWhenTimoutCheckBox
         '
@@ -112,7 +112,7 @@ Partial Class RemoteAppHostOptions
         Me.LogoffWhenTimoutCheckBox.Name = "LogoffWhenTimoutCheckBox"
         Me.LogoffWhenTimoutCheckBox.Size = New System.Drawing.Size(262, 19)
         Me.LogoffWhenTimoutCheckBox.TabIndex = 8
-        Me.LogoffWhenTimoutCheckBox.Text = "Logoff sessions when time limits are reached"
+        Me.LogoffWhenTimoutCheckBox.Text = "达到时间限制时注销会话"
         Me.LogoffWhenTimoutCheckBox.UseVisualStyleBackColor = True
         '
         'SaveButton
@@ -126,7 +126,7 @@ Partial Class RemoteAppHostOptions
         Me.SaveButton.Name = "SaveButton"
         Me.SaveButton.Size = New System.Drawing.Size(67, 29)
         Me.SaveButton.TabIndex = 11
-        Me.SaveButton.Text = "Save"
+        Me.SaveButton.Text = "保存"
         Me.SaveButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.SaveButton.UseVisualStyleBackColor = False
         '
@@ -145,8 +145,7 @@ Partial Class RemoteAppHostOptions
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(385, 33)
         Me.Label3.TabIndex = 9
-        Me.Label3.Text = "Note: Settings here will be overridden by local policy and group policy. Some set" &
-    "tings require a reboot."
+        Me.Label3.Text = "注意：此处的设置会被本地策略和组策略覆盖。某些设置需要重新启动才能生效。"
         '
         'CancelEditButton
         '
@@ -159,7 +158,7 @@ Partial Class RemoteAppHostOptions
         Me.CancelEditButton.Name = "CancelEditButton"
         Me.CancelEditButton.Size = New System.Drawing.Size(75, 29)
         Me.CancelEditButton.TabIndex = 10
-        Me.CancelEditButton.Text = "Cancel"
+        Me.CancelEditButton.Text = "取消"
         Me.CancelEditButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.CancelEditButton.UseVisualStyleBackColor = False
         '
@@ -170,7 +169,7 @@ Partial Class RemoteAppHostOptions
         Me.AllowUnlistedRemoteProgramsCheckBox.Name = "AllowUnlistedRemoteProgramsCheckBox"
         Me.AllowUnlistedRemoteProgramsCheckBox.Size = New System.Drawing.Size(200, 19)
         Me.AllowUnlistedRemoteProgramsCheckBox.TabIndex = 1
-        Me.AllowUnlistedRemoteProgramsCheckBox.Text = "Allow Unlisted Remote Programs"
+        Me.AllowUnlistedRemoteProgramsCheckBox.Text = "允许未列出的远程程序"
         Me.AllowUnlistedRemoteProgramsCheckBox.UseVisualStyleBackColor = True
         '
         'RemoteAppHostOptions
@@ -200,7 +199,7 @@ Partial Class RemoteAppHostOptions
         Me.MinimizeBox = False
         Me.Name = "RemoteAppHostOptions"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
-        Me.Text = "Host Options"
+        Me.Text = "主机选项"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

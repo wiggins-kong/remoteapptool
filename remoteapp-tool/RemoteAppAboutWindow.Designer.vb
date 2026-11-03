@@ -52,7 +52,7 @@ Partial Class RemoteAppAboutWindow
         Me.VersionLabel.Name = "VersionLabel"
         Me.VersionLabel.Size = New System.Drawing.Size(350, 30)
         Me.VersionLabel.TabIndex = 0
-        Me.VersionLabel.Text = "Version 0.0.0.0"
+        Me.VersionLabel.Text = "版本 0.0.0.0"
         Me.VersionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'CopyrightLabel
@@ -83,7 +83,7 @@ Partial Class RemoteAppAboutWindow
         Me.IconLibCreatedByLabel.Name = "IconLibCreatedByLabel"
         Me.IconLibCreatedByLabel.Size = New System.Drawing.Size(350, 30)
         Me.IconLibCreatedByLabel.TabIndex = 4
-        Me.IconLibCreatedByLabel.Text = "Created by CastorTiu"
+        Me.IconLibCreatedByLabel.Text = "由 CastorTiu 创建"
         Me.IconLibCreatedByLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'IconLibLabel
@@ -115,7 +115,7 @@ Partial Class RemoteAppAboutWindow
         Me.IconLibLicenceTextLabel.Name = "IconLibLicenceTextLabel"
         Me.IconLibLicenceTextLabel.Size = New System.Drawing.Size(350, 67)
         Me.IconLibLicenceTextLabel.TabIndex = 4
-        Me.IconLibLicenceTextLabel.Text = "Licensed under a Creative Commons" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Attribution-Share Alike 3.0 Unported License"
+        Me.IconLibLicenceTextLabel.Text = "依据知识共享" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "署名-相同方式共享 3.0 未本地化版本许可协议授权"
         Me.IconLibLicenceTextLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'RemoteAppToolLicenceTextLabel
@@ -125,7 +125,7 @@ Partial Class RemoteAppAboutWindow
         Me.RemoteAppToolLicenceTextLabel.Name = "RemoteAppToolLicenceTextLabel"
         Me.RemoteAppToolLicenceTextLabel.Size = New System.Drawing.Size(350, 30)
         Me.RemoteAppToolLicenceTextLabel.TabIndex = 6
-        Me.RemoteAppToolLicenceTextLabel.Text = "Licensed under The MIT License"
+        Me.RemoteAppToolLicenceTextLabel.Text = "依据 MIT 许可证授权"
         Me.RemoteAppToolLicenceTextLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'RemoteAppAboutWindow
@@ -150,7 +150,7 @@ Partial Class RemoteAppAboutWindow
         Me.MinimizeBox = False
         Me.Name = "RemoteAppAboutWindow"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
-        Me.Text = "RemoteAppAboutWindow"
+        Me.Text = "关于 RemoteApp Tool"
         Me.ResumeLayout(False)
 
     End Sub

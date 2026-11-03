@@ -67,44 +67,44 @@ Partial Class RemoteAppIconPicker
         '
         'ShortName
         '
-        Me.ShortName.Text = "ShortName"
+        Me.ShortName.Text = "短名称"
         Me.ShortName.Width = 200
         '
         'Title
         '
-        Me.Title.Text = "Name"
+        Me.Title.Text = "名称"
         '
         'Path
         '
-        Me.Path.Text = "Path"
+        Me.Path.Text = "路径"
         '
         'VPath
         '
-        Me.VPath.Text = "VPath"
+        Me.VPath.Text = "虚拟路径"
         '
         'RequiredCommandLine
         '
-        Me.RequiredCommandLine.Text = "RequiredCommandLine"
+        Me.RequiredCommandLine.Text = "必需命令行"
         '
         'CommandLineSetting
         '
-        Me.CommandLineSetting.Text = "CommandLineSetting"
+        Me.CommandLineSetting.Text = "命令行设置"
         '
         'IconPath
         '
-        Me.IconPath.Text = "IconPath"
+        Me.IconPath.Text = "图标路径"
         '
         'IconIndex
         '
-        Me.IconIndex.Text = "IconIndex"
+        Me.IconIndex.Text = "图标索引"
         '
         'SecurityDescriptor
         '
-        Me.SecurityDescriptor.Text = "SecurityDescriptor"
+        Me.SecurityDescriptor.Text = "安全描述符"
         '
         'ShowInTSWA
         '
-        Me.ShowInTSWA.Text = "ShowInTSWA"
+        Me.ShowInTSWA.Text = "在 TSWebAccess 中显示"
         '
         'SmallIcons
         '
@@ -122,7 +122,7 @@ Partial Class RemoteAppIconPicker
         Me.BrowseButton.Name = "BrowseButton"
         Me.BrowseButton.Size = New System.Drawing.Size(82, 29)
         Me.BrowseButton.TabIndex = 0
-        Me.BrowseButton.Text = "Browse..."
+        Me.BrowseButton.Text = "浏览..."
         Me.BrowseButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.BrowseButton.UseVisualStyleBackColor = False
         '
@@ -157,8 +157,8 @@ Partial Class RemoteAppIconPicker
         '
         'FileBrowserIcon
         '
-        Me.FileBrowserIcon.Filter = "Icons|*.exe;*.dll;*.ico|All files|*.*"
-        Me.FileBrowserIcon.Title = "Browse..."
+        Me.FileBrowserIcon.Filter = "图标|*.exe;*.dll;*.ico|所有文件|*.*"
+        Me.FileBrowserIcon.Title = "浏览..."
         '
         'CancelEditButton
         '
@@ -172,7 +172,7 @@ Partial Class RemoteAppIconPicker
         Me.CancelEditButton.Name = "CancelEditButton"
         Me.CancelEditButton.Size = New System.Drawing.Size(75, 29)
         Me.CancelEditButton.TabIndex = 7
-        Me.CancelEditButton.Text = "Cancel"
+        Me.CancelEditButton.Text = "取消"
         Me.CancelEditButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.CancelEditButton.UseVisualStyleBackColor = False
         '
@@ -188,7 +188,7 @@ Partial Class RemoteAppIconPicker
         Me.OKButton.Name = "OKButton"
         Me.OKButton.Size = New System.Drawing.Size(67, 29)
         Me.OKButton.TabIndex = 8
-        Me.OKButton.Text = "OK"
+        Me.OKButton.Text = "确定"
         Me.OKButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.OKButton.UseVisualStyleBackColor = False
         '
@@ -200,7 +200,7 @@ Partial Class RemoteAppIconPicker
         Me.FileTypeLabel.Name = "FileTypeLabel"
         Me.FileTypeLabel.Size = New System.Drawing.Size(66, 15)
         Me.FileTypeLabel.TabIndex = 5
-        Me.FileTypeLabel.Text = "File type:   ."
+        Me.FileTypeLabel.Text = "文件类型：  ."
         Me.FileTypeLabel.Visible = False
         '
         'FileTypeTextBox
@@ -222,7 +222,7 @@ Partial Class RemoteAppIconPicker
         Me.IconIndexLabel.Name = "IconIndexLabel"
         Me.IconIndexLabel.Size = New System.Drawing.Size(39, 15)
         Me.IconIndexLabel.TabIndex = 2
-        Me.IconIndexLabel.Text = "Index:"
+        Me.IconIndexLabel.Text = "索引："
         Me.IconIndexLabel.Visible = False
         '
         'RemoteAppIconPicker
@@ -249,7 +249,7 @@ Partial Class RemoteAppIconPicker
         Me.MinimumSize = New System.Drawing.Size(515, 270)
         Me.Name = "RemoteAppIconPicker"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
-        Me.Text = "RemoteAppIconPicker"
+        Me.Text = "选择图标"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

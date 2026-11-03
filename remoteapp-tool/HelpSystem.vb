@@ -59,48 +59,48 @@
     Private Function GetBuiltInTips() As String
         Dim Tips As String = ""
 
-        Tips += "RemoteAppMainWindow|CreateButton|Add a new RemoteApp." & vbCrLf
-        Tips += "RemoteAppMainWindow|DeleteButton|Remove selected RemoteApp." & vbCrLf
-        Tips += "RemoteAppMainWindow|EditButton|Edit properties of selected RemoteApp." & vbCrLf
-        Tips += "RemoteAppMainWindow|CreateClientConnection|Creates a RDP file or MSI installer for the selected RemoteApp." & vbCrLf
+        Tips += "RemoteAppMainWindow|CreateButton|添加新的 RemoteApp。" & vbCrLf
+        Tips += "RemoteAppMainWindow|DeleteButton|移除选定的 RemoteApp。" & vbCrLf
+        Tips += "RemoteAppMainWindow|EditButton|编辑选定 RemoteApp 的属性。" & vbCrLf
+        Tips += "RemoteAppMainWindow|CreateClientConnection|为选定的 RemoteApp 创建 RDP 文件或 MSI 安装包。" & vbCrLf
 
-        Tips += "RemoteAppEditWindow|SaveButton|Save changes and close." & vbCrLf
-        Tips += "RemoteAppEditWindow|FTAButton|Set file type associations for this RemoteApp." & vbCrLf
-        Tips += "RemoteAppEditWindow|CancelEditButton|Discard changes and close." & vbCrLf
-        Tips += "RemoteAppEditWindow|BrowseIconPath|Select an icon for the RemoteApp." & vbCrLf
-        Tips += "RemoteAppEditWindow|IconPathCopyButton|Copy the value from the ""Path"" field into the ""Icon path"" field. " & vbCrLf
-        Tips += "RemoteAppEditWindow|BrowsePath|Browse for application." & vbCrLf
-        Tips += "RemoteAppEditWindow|IconResetButton|Reset the icon to the default for this application." & vbCrLf
+        Tips += "RemoteAppEditWindow|SaveButton|保存更改并关闭。" & vbCrLf
+        Tips += "RemoteAppEditWindow|FTAButton|设置此 RemoteApp 的文件类型关联。" & vbCrLf
+        Tips += "RemoteAppEditWindow|CancelEditButton|放弃更改并关闭。" & vbCrLf
+        Tips += "RemoteAppEditWindow|BrowseIconPath|为 RemoteApp 选择图标。" & vbCrLf
+        Tips += "RemoteAppEditWindow|IconPathCopyButton|将「路径」字段的值复制到「图标路径」字段。" & vbCrLf
+        Tips += "RemoteAppEditWindow|BrowsePath|浏览应用程序。" & vbCrLf
+        Tips += "RemoteAppEditWindow|IconResetButton|将图标重置为此应用程序的默认图标。" & vbCrLf
 
         'IconResetButton
 
-        Tips += "RemoteAppCreateClientConnection|RDPRadioButton|Create an RDP file." & vbCrLf
-        Tips += "RemoteAppCreateClientConnection|MSIRadioButton|Create an MSI file." & vbCrLf
-        Tips += "RemoteAppCreateClientConnection|EditAfterSave|Edit the RDP connection file." & vbCrLf
-        Tips += "RemoteAppCreateClientConnection|CreateRAWebIcon|Generate an icon for the application and any file type associations.\r\nUse this with RAWeb." & vbCrLf
-        Tips += "RemoteAppCreateClientConnection|FTAButton|Set file type associations for this RemoteApp.\r\nChanges here will only affect this client connection. They will not be saved." & vbCrLf
-        Tips += "RemoteAppCreateClientConnection|DisabledFTACheckBox|Do not include file type associations in this client connection." & vbCrLf
-        Tips += "RemoteAppCreateClientConnection|SaveButton|Save window settings for next time." & vbCrLf
-        Tips += "RemoteAppCreateClientConnection|ResetButton|Reset window settings to defaults." & vbCrLf
-        Tips += "RemoteAppCreateClientConnection|CancelEditButton|Close and return to the main window." & vbCrLf
-        Tips += "RemoteAppCreateClientConnection|CreateButton|Create the client connection and choose where to save it." & vbCrLf
-        Tips += "RemoteAppCreateClientConnection|UseRDGatewayCheckBox|Use a Remote Desktop Gateway to connect to the host." & vbCrLf
-        Tips += "RemoteAppCreateClientConnection|AttemptDirectCheckBox|Try a direct connection first, if that fails then use the Remote Desktop Gateway." & vbCrLf
-        Tips += "RemoteAppCreateClientConnection|ShortcutTagCheckBox|Append some text to the end of each shortcut title." & vbCrLf
-        Tips += "RemoteAppCreateClientConnection|PerMachineRadioButton|Should the shortcuts install for all users (per-machine), or only for the logged in user (per user)?" & vbCrLf
-        Tips += "RemoteAppCreateClientConnection|PerUserRadioButton|Should the shortcuts install for all users (per-machine), or only for the logged in user (per user)?" & vbCrLf
-        Tips += "RemoteAppCreateClientConnection|CheckBoxSignRDPEnabled|Digitally sign the RDP file." & vbCrLf
-        Tips += "RemoteAppCreateClientConnection|CheckBoxCreateSignedAndUnsigned|Produce both a signed and unsigned copy of the RDP file." & vbCrLf
+        Tips += "RemoteAppCreateClientConnection|RDPRadioButton|创建 RDP 文件。" & vbCrLf
+        Tips += "RemoteAppCreateClientConnection|MSIRadioButton|创建 MSI 文件。" & vbCrLf
+        Tips += "RemoteAppCreateClientConnection|EditAfterSave|编辑 RDP 连接文件。" & vbCrLf
+        Tips += "RemoteAppCreateClientConnection|CreateRAWebIcon|为应用程序及所有文件类型关联生成图标。\r\n可与 RAWeb 配合使用。" & vbCrLf
+        Tips += "RemoteAppCreateClientConnection|FTAButton|设置此 RemoteApp 的文件类型关联。\r\n此处的更改仅影响本次客户端连接，不会保存。" & vbCrLf
+        Tips += "RemoteAppCreateClientConnection|DisabledFTACheckBox|在此客户端连接中不包含文件类型关联。" & vbCrLf
+        Tips += "RemoteAppCreateClientConnection|SaveButton|保存窗口设置以供下次使用。" & vbCrLf
+        Tips += "RemoteAppCreateClientConnection|ResetButton|将窗口设置重置为默认值。" & vbCrLf
+        Tips += "RemoteAppCreateClientConnection|CancelEditButton|关闭并返回主窗口。" & vbCrLf
+        Tips += "RemoteAppCreateClientConnection|CreateButton|创建客户端连接并选择保存位置。" & vbCrLf
+        Tips += "RemoteAppCreateClientConnection|UseRDGatewayCheckBox|使用远程桌面网关连接到主机。" & vbCrLf
+        Tips += "RemoteAppCreateClientConnection|AttemptDirectCheckBox|先尝试直接连接，如果失败则使用远程桌面网关。" & vbCrLf
+        Tips += "RemoteAppCreateClientConnection|ShortcutTagCheckBox|在每个快捷方式标题末尾追加一些文本。" & vbCrLf
+        Tips += "RemoteAppCreateClientConnection|PerMachineRadioButton|快捷方式应为所有用户安装（每台计算机），还是仅为当前登录用户安装（每用户）？" & vbCrLf
+        Tips += "RemoteAppCreateClientConnection|PerUserRadioButton|快捷方式应为所有用户安装（每台计算机），还是仅为当前登录用户安装（每用户）？" & vbCrLf
+        Tips += "RemoteAppCreateClientConnection|CheckBoxSignRDPEnabled|对 RDP 文件进行数字签名。" & vbCrLf
+        Tips += "RemoteAppCreateClientConnection|CheckBoxCreateSignedAndUnsigned|同时生成 RDP 文件的已签名和未签名副本。" & vbCrLf
 
-        Tips += "RemoteAppFileTypeAssociation|CreateButton|Create a new File Type Association." & vbCrLf
-        Tips += "RemoteAppFileTypeAssociation|DeleteButton|Delete selected File Type Association." & vbCrLf
-        Tips += "RemoteAppFileTypeAssociation|EditButton|Change icon of selected File Type Association." & vbCrLf
-        Tips += "RemoteAppFileTypeAssociation|SetAssociationButton|Create or remove the selected File Type Association on the current system." & vbCrLf
-        Tips += "RemoteAppFileTypeAssociation|CloseButton|Save changes and close." & vbCrLf
+        Tips += "RemoteAppFileTypeAssociation|CreateButton|新建文件类型关联。" & vbCrLf
+        Tips += "RemoteAppFileTypeAssociation|DeleteButton|删除选定的文件类型关联。" & vbCrLf
+        Tips += "RemoteAppFileTypeAssociation|EditButton|更改选定文件类型关联的图标。" & vbCrLf
+        Tips += "RemoteAppFileTypeAssociation|SetAssociationButton|在当前系统上创建或移除选定的文件类型关联。" & vbCrLf
+        Tips += "RemoteAppFileTypeAssociation|CloseButton|保存更改并关闭。" & vbCrLf
 
-        Tips += "RemoteAppIconPicker|BrowseButton|Browse for a file that contains icons." & vbCrLf
-        Tips += "RemoteAppIconPicker|CancelEditButton|Discard changes and close." & vbCrLf
-        Tips += "RemoteAppIconPicker|OKButton|Choose the selected icon." & vbCrLf
+        Tips += "RemoteAppIconPicker|BrowseButton|浏览包含图标的文件。" & vbCrLf
+        Tips += "RemoteAppIconPicker|CancelEditButton|放弃更改并关闭。" & vbCrLf
+        Tips += "RemoteAppIconPicker|OKButton|选择选定的图标。" & vbCrLf
 
         Return Tips
     End Function

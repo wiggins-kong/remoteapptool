@@ -18,7 +18,7 @@ Public Class RemoteAppMainWindow
         Try
             TestIconLib()
         Catch ex As System.IO.FileNotFoundException
-            MessageBox.Show("IconLib.dll is unavailable. Please add it to the RemoteApp Tool folder.")
+            MessageBox.Show("IconLib.dll 不可用。请将其放入 RemoteApp Tool 文件夹。")
             End
         End Try
 
@@ -136,7 +136,7 @@ Public Class RemoteAppMainWindow
     End Sub
 
     Private Sub DeleteRemoteApp(ByVal AppName As String)
-        If MessageBox.Show("Are you sure you want to remove " & AppName & "?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = Windows.Forms.DialogResult.Yes Then
+        If MessageBox.Show("确定要移除 " & AppName & " 吗？", "确认", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = Windows.Forms.DialogResult.Yes Then
             Dim sra As New SystemRemoteApps
             sra.DeleteApp(AppName)
         End If
@@ -160,7 +160,7 @@ Public Class RemoteAppMainWindow
         'Add a standard Separator Item.
         AppendMenu(hSysMenu, MF_SEPARATOR, 1000, Nothing)
         'Add an About Menu Item.
-        AppendMenu(hSysMenu, MF_STRING, 1001, "About...")
+        AppendMenu(hSysMenu, MF_STRING, 1001, "关于...")
     End Sub
 
     Protected Overrides Sub WndProc(ByRef m As System.Windows.Forms.Message)
@@ -205,7 +205,7 @@ Public Class RemoteAppMainWindow
     End Sub
 
     Private Sub BackupAllRemoteAppsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BackupAllRemoteAppsToolStripMenuItem.Click
-        BackupSaveFileDialog.FileName = System.Net.Dns.GetHostName & " RemoteApps Backup " & DateTime.Now.ToString("yyyy-MM-dd") & ".reg"
+        BackupSaveFileDialog.FileName = System.Net.Dns.GetHostName & " RemoteApps 备份 " & DateTime.Now.ToString("yyyy-MM-dd") & ".reg"
         DialogResult = BackupSaveFileDialog.ShowDialog()
 
         If DialogResult = DialogResult.OK Then

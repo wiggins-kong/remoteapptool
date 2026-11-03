@@ -60,22 +60,22 @@ Partial Class RemoteAppFileTypeAssociation
         '
         'FileExtension
         '
-        Me.FileExtension.Text = "Extension"
+        Me.FileExtension.Text = "扩展名"
         Me.FileExtension.Width = 64
         '
         'IconPath
         '
-        Me.IconPath.Text = "Icon Path"
+        Me.IconPath.Text = "图标路径"
         Me.IconPath.Width = 305
         '
         'IconIndex
         '
-        Me.IconIndex.Text = "Index"
+        Me.IconIndex.Text = "索引"
         Me.IconIndex.Width = 51
         '
         'Associated
         '
-        Me.Associated.Text = "Association"
+        Me.Associated.Text = "关联状态"
         Me.Associated.Width = 76
         '
         'CreateButton
@@ -161,7 +161,7 @@ Partial Class RemoteAppFileTypeAssociation
         Me.CloseButton.Name = "CloseButton"
         Me.CloseButton.Size = New System.Drawing.Size(67, 29)
         Me.CloseButton.TabIndex = 6
-        Me.CloseButton.Text = "OK"
+        Me.CloseButton.Text = "确定"
         Me.CloseButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.CloseButton.UseVisualStyleBackColor = False
         '
@@ -212,7 +212,7 @@ Partial Class RemoteAppFileTypeAssociation
         Me.MinimumSize = New System.Drawing.Size(510, 247)
         Me.Name = "RemoteAppFileTypeAssociation"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
-        Me.Text = "File Type Associations"
+        Me.Text = "文件类型关联"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
